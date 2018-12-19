@@ -8,6 +8,7 @@ class GeneralModel extends CI_Model {
         parent::__construct();
         $this->load->database();
         $this->load->library('session');
+        $this->config->load('appconf');
     }
 
     // simple item
@@ -247,8 +248,7 @@ class GeneralModel extends CI_Model {
     {
         // upload image
         move_uploaded_file($filesData['image']['tmp_name'],
-            '/Users/fidel/Documents/web/cmcanalytics/intranet-com/html/events/'.
-            $filesData['image']['name']);
+            $this->config->item('eventsUpload').$filesData['image']['name']);
         // register new
         $dateIni = $postData['date_ini'].' '. $postData['time_ini'];
         $dateEnd = $postData['date_end'].' '. $postData['time_end'];

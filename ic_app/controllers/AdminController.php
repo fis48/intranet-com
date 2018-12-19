@@ -8,6 +8,7 @@ class AdminController extends CI_Controller {
         $this->load->helper('url');
         $this->load->library('form_validation');
         $this->load->model('GeneralModel');
+        $this->config->load('appconf');
     }
 
     // dashboard
@@ -192,8 +193,7 @@ class AdminController extends CI_Controller {
         if ( $this->input->is_ajax_request() ) {
             $filesData = $_FILES['file'];
             move_uploaded_file($filesData['tmp_name'][0],
-                '/Users/fidel/Documents/web/cmcanalytics/intranet-com/html/news/'.
-                $filesData['name'][0]);
+                $this->config->item('newsUpload').$filesData['name'][0]);
             // set img name in sessión for bulletin db insert
             $this->session->set_userdata('temp_bull_img', $filesData['name'][0]);
             echo '/news/'.$filesData['name'][0];
@@ -203,7 +203,7 @@ class AdminController extends CI_Controller {
         if ($this->input->post()) {
             $this->GeneralModel->addNews($this->input->post(), $_FILES);
             $this->session->set_flashdata('msg', 'Noticia guardada.');
-            // redirect('/admin/news', 'refresh');
+            redirect('/admin/news', 'refresh');
         }
         // default
         $data['logged'] = $this->session->userdata('admin');
