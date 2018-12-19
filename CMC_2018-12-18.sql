@@ -4,7 +4,7 @@
 #
 # Host: localhost (MySQL 5.5.29)
 # Database: CMC
-# Generation Time: 2018-12-18 14:03:06 +0000
+# Generation Time: 2018-12-19 03:49:24 +0000
 # ************************************************************
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -79,16 +79,15 @@ CREATE TABLE `news` (
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `description` text NOT NULL,
   `image` varchar(255) DEFAULT NULL,
-  `bulletin` varchar(255) NOT NULL,
+  `body` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` (`id`,`title`,`date`,`description`,`image`,`bulletin`)
+INSERT INTO `news` (`id`,`title`,`date`,`description`,`image`,`body`)
 VALUES
-	(1,'Noticia 1','2018-11-29 00:00:00','Pellentesque semper, elit vel consectetur consequat, justo dolor vestibulum sem, id facilisis sapien lectus nec lorem. Nulla hendrerit sem ac nulla cursus, sed cursus lorem accumsan. Nunc eget felis laoreet, pulvinar ipsum non, molestie elit. Nam porta tempor lorem, eu scelerisque diam commodo sit amet.','DSC_0139.jpg','Guía de optimización de motores de búsqueda (SEO) de una página de Google.pdf'),
-	(2,'Noticia 2','2018-12-11 00:00:00','Cras auctor maximus posuere. Suspendisse euismod metus quis lacus molestie posuere. Duis gravida diam eget ante pretium, in vulputate ligula pellentesque. Donec a pellentesque magna. Sed commodo dolor quis enim cursus suscipit. Aliquam convallis maximus egestas. Nulla facilisi. Morbi non varius erat.','atardecer3.jpg','Guía de optimización de motores de búsqueda (SEO) de una página de Google.pdf');
+	(6,'Boletín Uno','2018-12-18 00:00:00','Fusce id urna quam. Pellentesque vel sagittis magna, ut semper ante. Morbi sit amet leo at justo lobortis tempor vel vel magna. Donec felis leo, elementum a porttitor vel, vestibulum ut odio. Aenean auctor, lectus nec molestie lobortis, ipsum ipsum convallis velit, nec eleifend erat purus nec ante. Vivamus tincidunt placerat sollicitudin.','/news/DSC_0173.jpg','<figure><img src=\"/news/DSC_0173.jpg\" data-image=\"sjllmys7sunb\"></figure><h1>Fusce id urna quam</h1><p>Fusce id urna quam. Pellentesque vel sagittis magna, ut semper ante. Morbi sit amet leo at justo lobortis tempor vel vel magna. Donec felis leo, elementum a porttitor vel, vestibulum ut odio. Aenean auctor, lectus nec molestie lobortis, ipsum ipsum convallis velit, nec eleifend erat purus nec ante. Vivamus tincidunt placerat sollicitudin. Maecenas purus tortor, eleifend ac eleifend sit amet, tincidunt vitae ligula. Aliquam ut ornare magna. Donec odio neque, laoreet fermentum vestibulum iaculis, elementum vitae ligula. Nunc cursus est quis tortor varius, non lobortis odio dapibus.</p>\r\n<p>Donec consequat ultricies consequat. Praesent tortor est, tincidunt ac lectus blandit, auctor vestibulum ex. Pellentesque semper porta ante eget commodo. Fusce at posuere ipsum, id dictum justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id odio magna. Mauris ac risus dictum, ultrices neque sit amet, rhoncus velit. Duis at turpis id ligula finibus porta in sed libero.</p>\r\n<h2>Maecenas vel nisi tortor.</h2><p>Maecenas vel nisi tortor. Donec non auctor massa. Curabitur bibendum lacus in ipsum viverra, et varius urna pretium. Phasellus in erat ut ipsum euismod condimentum non a diam. Vestibulum nisi tortor, tempor vel tincidunt vitae, dictum a ipsum. Etiam mollis massa finibus venenatis vestibulum. Proin in nibh at nulla placerat tincidunt in congue nisi. Vestibulum venenatis nec enim eu accumsan. Sed tristique odio odio. Etiam interdum justo non neque molestie, ut pulvinar mi feugiat. Nunc sit amet maximus dui. Donec a diam aliquam, convallis erat a, posuere leo. In gravida egestas justo, vitae pulvinar velit placerat ut. Integer consectetur lectus sit amet nisl faucibus ullamcorper sed et magna.</p>\r\n<p>Mauris interdum augue sit amet placerat commodo. Nam vel lacinia sem, sit amet iaculis libero. Vestibulum dapibus nunc risus, suscipit feugiat diam bibendum et. Morbi sed urna et mauris feugiat ullamcorper. Ut ultrices sollicitudin eleifend. Praesent semper dolor non laoreet ullamcorper. Nunc facilisis dolor vel faucibus eleifend. Maecenas non pharetra lacus. Integer eget accumsan ante. Duis tempus, nulla sed dictum vestibulum, nunc felis ultrices lectus, cursus dapibus ipsum ipsum bibendum quam.</p>\r\n<p></p>');
 
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
