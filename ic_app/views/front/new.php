@@ -11,7 +11,9 @@
             <i class="fa fa-calendar-alt"></i>
             <?php echo strftime('%B %d de %Y', $newDate->getTimestamp()); ?>
         </h3>
-        <p><?php echo $new->description ?></p>
+        <p>
+            <?php echo substr($new->description, 0, 220).'...' ?>                
+        </p>
     </div>
 </div>
 
