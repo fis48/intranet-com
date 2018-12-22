@@ -12,7 +12,7 @@
             <?php echo strftime('%B %d de %Y', $newDate->getTimestamp()); ?>
         </h3>
         <p>
-            <?php echo substr($new->description, 0, 220).'...' ?>                
+            <?php echo $new->description ?>
         </p>
     </div>
 </div>
