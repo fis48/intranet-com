@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'mainFont';
-  src: url('/fonts/OpenSans-Regular.ttf');
+  src: url('/fonts/OpenSans-Light.ttf');
 }
 
 @font-face {
@@ -14,7 +14,7 @@ section {
     float: left;
     width: 100%;
     padding: 70px;
-    padding-top: 120px;
+    padding-top: 50px;
 }
 
 body {
@@ -26,8 +26,14 @@ section.gray-back {
     background: #E8E8E8;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'BoldFont';
+    color: #003056;
+    letter-spacing: -2px;
+}
+
 p {
-    line-height: 120%;
+    line-height: 150%;
 }
 
 a {
@@ -155,6 +161,7 @@ a:hover {
 .section-title {
     text-align: center;
     width: 100%;
+    padding: 25px 0;
 }
 
 .icon-card,
@@ -207,6 +214,16 @@ a:hover {
     background: #3FD2AB;
 }
 
+.flashdata a {
+    position: relative;
+    background: #3FD2AB;
+    margin-top: 10px;
+    font-size: 12px;
+    float: left;
+    width: 20%;
+    margin-left: 40%;
+}
+
 .icon-card img {
     margin-bottom: 15px;
 }
@@ -247,6 +264,7 @@ span.info {
 .bull-head {
     background: #E8E8E8;
     padding: 35px;
+    margin-bottom: 25px;
     border: 1px solid #DDD;
     border-radius: 5px;
 }
@@ -255,6 +273,26 @@ span.info {
     display: none;
 }
 
+.flashdata {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFF;
+}
+
+.flashdata p {
+    margin-left: 30%;
+    margin-top: 50px;
+    background-color: #003056;
+    padding: 25px;
+    text-align: center;
+    float: left;
+    width: 40%;
+}
 
 
 

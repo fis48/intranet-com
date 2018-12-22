@@ -82,6 +82,10 @@
                         <i class="fa fa-marker"></i><br>
                         Actualizar respuesta
                     </th>
+                    <th>
+                        <i class="fa fa-check"></i><br>
+                        Publicar
+                    </th>
                 </tr>
             </thead>
         <?php foreach ($questions->resolved as $rQuestion): ?>
@@ -109,6 +113,10 @@
                         <i class="fa fa-exchange-alt"></i>
                         Acutalizar respuesta
                     </a>
+                </td>
+                <td>
+                    <input type="checkbox" name="is_public" data-id="<?php echo $rQuestion->id ?>"
+                    <?php if($rQuestion->is_public){ echo "checked"; } ?> >
                 </td>
             </tr>
         <?php endforeach ?>

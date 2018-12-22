@@ -160,6 +160,7 @@ class GeneralModel extends CI_Model {
         $questions->resolved    = array();
         // raw questions
         $this->db->where('is_comment', 0);
+        $this->db->where('is_public', 1);
         $rawQuestions = $this->db->get('questions')->result();
         foreach ($rawQuestions as $rQuestion) {
             if ($rQuestion->response_date == NULL) {
@@ -263,7 +264,41 @@ class GeneralModel extends CI_Model {
         $this->db->insert('events', $arrIns);
         return $this->getLastItem('events');
     }
+    // set public
+    function setPublic($postData)
+    {
+        $this->db->where('id', $postData['qId']);
+        if ($postData['public'] == 'true') {
+            $arrUpd = array(
+                'is_public' => 1
+            );
+        }
+        else {
+            $arrUpd = array(
+                'is_public' => 0
+            );
+        }
+        $this->db->update('questions', $arrUpd);
+        return $this->getSimpleItem('questions', $postData['qId']);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

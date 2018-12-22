@@ -126,6 +126,19 @@ class AdminController extends CI_Controller {
         $data['questions']  = $this->GeneralModel->getQuestions();
         $this->load->view('general/back-template', $data);
     }
+    // create question
+    public function createQuestion()
+    {
+        $data['now']    = new Datetime();
+        $data['mainContent']    = 'forms/question';
+        $this->load->view('general/front-template', $data);
+    }
+    // questions ajax set public
+    public function setPublic()
+    {
+        $setp = $this->GeneralModel->setPublic($this->input->post());
+        echo json_encode($setp);
+    }
     // question response
     public function questionResponse()
     {

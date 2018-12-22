@@ -18,7 +18,10 @@
         <!-- flashdata -->
         <?php if ($this->session->flashdata('msg') !== NULL): ?>
             <div class="flashdata col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <i class="fa fa-info-circle fa-2x"></i>
-                <span><?php echo $this->session->flashdata('msg') ?></span>
+                <p>
+                    <?php echo $this->session->flashdata('msg') ?>
+                    <br>        
+                    <a href="/">Cerrar</a>
+                </p>
             </div>
         <?php endif ?>

@@ -43,15 +43,20 @@ class FrontController extends CI_Controller {
     public function askQuestion()
     {
         $is_comment = $this->input->post('is_comment');
+        $is_admin = $this->input->post('is_admin');
         $this->GeneralModel->askQuestion($this->input->post());
         // redirect
         if ($is_comment) {
-            $this->session->set_flashdata('msg', 'Su comentario ha sido enviado.');
+            $this->session->set_flashdata('msg', 'Gracias por enviarnos tus inquietudes. En los próximos días recibirás respuesta del equipo de transformación.');
             redirect('/front/comments', 'refresh');
+        }
+        elseif ($is_admin) {
+            $this->session->set_flashdata('msg', 'Gracias por enviarnos tus inquietudes. En los próximos días recibirás respuesta del equipo de transformación.');
+            redirect('/admin/questions', 'refresh');
         }
         else
         {
-            $this->session->set_flashdata('msg', 'Su pregunta ha sido enviada.');
+            $this->session->set_flashdata('msg', 'Gracias por enviarnos tus inquietudes. En los próximos días recibirás respuesta del equipo de transformación.');
             redirect('/front/questions', 'refresh');
         }
     }

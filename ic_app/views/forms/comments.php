@@ -57,6 +57,7 @@
         <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <!-- comment -->
             <textarea name="question" class="form-control" rows="10"></textarea>
+            <!-- is comment -->
             <input name="is_comment" type="hidden" value="1">
             <input name="question_date" value="<?php echo $now->format('Y-m-d H:i:s') ?>"
                 type="hidden">

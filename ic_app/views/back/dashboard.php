@@ -33,6 +33,7 @@
             </span>
         </h2>
         <a href="/admin/questions" class="btn btn-sm">Ver todo</a>
+        <a href="/admin/createquestion" class="btn btn-sm">Crear pregunta</a>
         <h3>
             <i class="fa fa-sm fa-exclamation-triangle"></i>
             Sin respuesta

@@ -40,7 +40,7 @@
                 </span>
             </p>
             <p class=" float-left">
-                <?php echo substr($event->description, 0, 220) ?>
+                <?php echo substr($event->description, 0, 220).'...' ?>
             </p>
             <a href="<?php echo '/evento/'.$event->id ?>" class="more-btn btn btn-sm">
                 Ver más
