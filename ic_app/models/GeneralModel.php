@@ -173,6 +173,26 @@ class GeneralModel extends CI_Model {
         }
         return $questions;
     }
+    // get all questions from backend
+    public function getQuestionsFromAdmin()
+    {
+        $questions = new StdClass();
+        $questions->unresolved  = array();
+        $questions->resolved    = array();
+        // raw questions
+        $this->db->where('is_comment', 0);
+        $rawQuestions = $this->db->get('questions')->result();
+        foreach ($rawQuestions as $rQuestion) {
+            if ($rQuestion->response_date == NULL) {
+                $questions->unresolved[]    = $rQuestion;
+            }
+            else
+            {
+                $questions->resolved[]  = $rQuestion;
+            }
+        }
+        return $questions;
+    }
     // question response
     public function questionResponse($question, $postData)
     {

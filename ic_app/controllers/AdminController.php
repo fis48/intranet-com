@@ -23,7 +23,7 @@ class AdminController extends CI_Controller {
         $data['logged'] = $logged;
         $data['glossary']   = $this->GeneralModel->getSimpleItems('glossary');
         $data['events']   = $this->GeneralModel->getSimpleItems('events');
-        $data['questions']  = $this->GeneralModel->getQuestions();
+        $data['questions']  = $this->GeneralModel->getQuestionsFromAdmin();
         $data['news']   = $this->GeneralModel->getNews();
         $comments = $this->GeneralModel->getComments();
         $data['comments']   = $comments;
@@ -123,7 +123,7 @@ class AdminController extends CI_Controller {
         setlocale(LC_ALL, 'es_ES');
         $data['logged'] = $this->session->userdata('admin');
         $data['mainContent']    = 'back/questions';
-        $data['questions']  = $this->GeneralModel->getQuestions();
+        $data['questions']  = $this->GeneralModel->getQuestionsFromAdmin();
         $this->load->view('general/back-template', $data);
     }
     // create question
