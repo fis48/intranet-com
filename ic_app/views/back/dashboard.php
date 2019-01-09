@@ -96,7 +96,7 @@
     <div class="float-left col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <h2>
             <i class="fa fa-newspaper fa-sm"></i>
-            Noticias
+            Boletines
             <span class="badge badge-pill badge-secondary"><?php echo count($news) ?></span>
         </h2>
         <a href="/admin/addnews" class="btn btn-sm">Agregar boletín</a>
@@ -150,6 +150,29 @@
                 </span>
                 <h4><?php echo $events[0]->title ?></h4>
                 <p><?php echo substr($events[0]->description, 0, 125).'...' ?></p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- projects -->
+<div class="container-fluid back-section">
+    <div class="float-left col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <h2>
+            <i class="fa fa-check fa-sm"></i> 
+            Proyectos
+            <span class="badge badge-pill badge-secondary"><?php echo count($projects) ?></span>
+        </h2>
+        <a href="/admin/addproject" class="btn btn-sm">Agregar proyectos</a>
+        <a href="/admin/projects" class="btn btn-sm">Ver todo</a>
+        <ul>
+            <li>
+                <?php if (isset($projects[0])): ?>
+                    <h4><?php echo $projects[0]->title ?></h4>
+                    <p><?php echo substr($projects[0]->description, 0, 125).'...' ?></p>
+                    <?php else: ?>
+                        <p>No se han creado proyectos</p>
+                <?php endif ?>
             </li>
         </ul>
     </div>

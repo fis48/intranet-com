@@ -39,6 +39,14 @@ class FrontController extends CI_Controller {
         $data['mainContent']    = 'front/questions';
         $this->load->view('general/front-template', $data);
     }
+    // questions all
+    public function questionsAll()
+    {
+        $data['questions']  = $this->GeneralModel->getQuestions(true);
+        $data['mainContent']    = 'front/questions-all';
+        $this->load->view('general/front-template', $data);
+
+    }
     // ask
     public function askQuestion()
     {
@@ -128,6 +136,21 @@ class FrontController extends CI_Controller {
         $data['event']  = $this->GeneralModel->getSimpleItem('events',
             $this->uri->segment(2));
         $data['mainContent']    = 'front/event';
+        $this->load->view('general/front-template', $data);
+    }
+    // projects
+    public function projects()
+    {
+        $data['projects']   = $this->GeneralModel->getSimpleItems('projects');
+        $data['mainContent']    = 'front/projects';
+        $this->load->view('general/front-template', $data);
+    }
+    // event
+    public function project()
+    {
+        $data['project']    = $this->GeneralModel->getSimpleItem('projects',
+            $this->uri->segment(2));
+        $data['mainContent']    = 'front/project';
         $this->load->view('general/front-template', $data);
     }
 }

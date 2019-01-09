@@ -70,12 +70,15 @@ a:hover {
 
 .main-cont {
     margin: 0 auto;
+    padding: 0;
 }
 
 .main-nav {
-    position: relative;
+    position: fixed;
     z-index: 1;
     padding: 15px;
+    background-color: #FFF;
+    box-shadow: 0 1px 8px #333;
 }
 
 .main-nav ul a {
@@ -174,14 +177,40 @@ a:hover {
     padding: 45px 15px;
 }
 
+.who-card p {
+    text-align: justify;
+    padding: 0 15px;
+    overflow-y: hidden;
+}
+
+.who-card h3 {
+    margin: 45px 0;
+}
+
+.who-card p span {
+    display: none;
+}
+
+.who-card a {
+    color: #003056 !important;
+    cursor: pointer;
+    text-decoration: underline !important;
+    text-align: center;
+}
+
+.who-card a:hover {
+    font-weight: bold;
+}
+
 .glossary-card {
-    background: url('/assets/concept-bg.png');
-    background-repeat: no-repeat;
-    background-size: 70%;
-    padding: 75px 150px;
     color: #FFF;
     background-position: center;
-    margin-bottom: 45px;
+    padding: 5%;
+}
+
+.glossary-card p {
+    padding: 45px;
+    background: #3381ba;
 }
 
 .quest-card {

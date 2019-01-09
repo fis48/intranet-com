@@ -2,25 +2,21 @@
 <section id="main-banner" class="container-fuid who">
     <!-- text -->
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
+        <div class="clear-25"></div>
+        <div class="clear-25"></div>
+        <div class="clear-25"></div>
+        <div class="clear-25"></div>
+        <div class="clear-25"></div>
         <h1>Comentarios</h1>
-        <p>
-            Párrafos de descripción de Programa de Transformación y del Website Párrafos
-            de descripción de Programa de Transformación y del Website Párrafos de
-            descripción de Programa de Transformación y del Website Párrafos de
-            descripción de Programa de Transformación y del Website Párrafos de
-            descripción de Programa de Transformación y del Website
-        </p>
+        <div class="clear-25"></div>
+        <div class="clear-25"></div>
+        <div class="clear-25"></div>
+        <div class="clear-25"></div>
     </div>
 </section>
 
-<!-- banner foot -->
-<section id="foot-banner" class=" no-padd">
-    <p>
-        Párrafo descriptivo del website: objetivo del website Párrafo descriptivo del website:
-        objetivo del website Párrafo descriptivo del website: objetivo del website Párrafo
-        descriptivo del website
-    </p>
-</section>
+<div class="clear-25"></div>
+<div class="clear-25"></div>
 
 <!-- comments form -->
 <?php $this->load->view('forms/comments'); ?>

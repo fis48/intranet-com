@@ -3,13 +3,15 @@
     <!-- text -->
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
         <h1>Programa de transformación</h1>
-        <p>
-            Párrafos de descripción de Programa de Transformación y del Website Párrafos
-            de descripción de Programa de Transformación y del Website Párrafos de
-            descripción de Programa de Transformación y del Website Párrafos de
-            descripción de Programa de Transformación y del Website Párrafos de
-            descripción de Programa de Transformación y del Website
-        </p>
+        <div class="clear-25"></div>
+        <ul>
+            <li><strong>DO</strong>blar el negocio</li>
+            <li><strong>RE</strong>vitalizar la experiencia del cliente</li>
+            <li><strong>MI</strong>nimizar ineficiencias y Riesgos</li>
+            <li><strong>FA</strong>vorecer el Medio Ambiente</li>
+            <li><strong>SOL</strong>o será posible potenciando nuestro talento</li>
+            <li><strong>ALIANZA</strong> Crece en armonía</li>
+        </ul>
     </div>
     <!-- video -->
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
@@ -24,19 +26,13 @@
 <!-- banner foot -->
 <section id="foot-banner" class=" no-padd">
     <p>
-        Párrafo descriptivo del website: objetivo del website Párrafo descriptivo del website:
-        objetivo del website Párrafo descriptivo del website: objetivo del website Párrafo
-        descriptivo del website
+    En este sitio podrás encontrar información relacionada con los proyectos que hacen parte del programa de transformación, sus principales representantes, ultimas noticias y eventos, y adicionalmente encontrarás un espacio para que puedas hacernos tus preguntas y comentarios al respecto del desarrollo de los proyectos.
     </p>
 </section>
 
 <!-- section title -->
 <div class="section-title container-fuid float-left">
-    <h2>Título de sección</h2>
-    <p>
-        Párrafo de explicación secciones (botones de acceso a otras páginas): las de arriba
-        son informativas, las de abajo son para de comentarios de los funcionarios
-    </p>
+    <h2>EL PROGRAMA</h2>
 </div>
 
 <!-- program -->
@@ -47,8 +43,7 @@
         <img class="img-fluid" src="/assets/projects-icon.png" />
         <h3>Los proyectos</h3>
         <p>
-            Descripción corta de la sección Descripción corta de la secciónDescripción
-            corta de la sección Descripción corta de la
+        Conoce en qué consisten los diferentes proyectos del programa de transformación
         </p>
     </div>
     <!-- who -->
@@ -57,8 +52,7 @@
             <img class="img-fluid" src="/assets/who-icon.png" />
             <h3>Quién es quién</h3>
             <p>
-                Descripción corta de la sección Descripción corta de la secciónDescripción
-                corta de la sección Descripción corta de la
+                Conoce a los líderes de los proyectos
             </p>
         </a>
     </div>
@@ -68,8 +62,7 @@
             <img class="img-fluid" src="/assets/glossary-icon.png" />
             <h3>Glosario</h3>
             <p>
-                Descripción corta de la sección Descripción corta de la secciónDescripción
-                corta de la sección Descripción corta de la
+            Aprende los términos y definiciones más relevantes de los proyectos
             </p>
         </a>
     </div>
@@ -84,8 +77,7 @@
             <img class="img-fluid" src="/assets/questions-icon.png" />
             <h3>Preguntas</h3>
             <p>
-                Descripción corta de la sección Descripción corta de la secciónDescripción
-                corta de la sección Descripción corta de la
+            Respondemos tus inquietudes
             </p>
         </a>
     </div>
@@ -95,8 +87,7 @@
             <img class="img-fluid" src="/assets/worry-icon.png" />
             <h3>Me preocupa que</h3>
             <p>
-                Descripción corta de la sección Descripción corta de la secciónDescripción
-                corta de la sección Descripción corta de la
+            Cuéntanos lo que te preocupa
             </p>
         </a>
     </div>
@@ -106,8 +97,7 @@
             <img class="img-fluid" src="/assets/like-icon.png" />
             <h3>Me gusta que</h3>
             <p>
-                Descripción corta de la sección Descripción corta de la secciónDescripción
-                corta de la sección Descripción corta de la
+            Resalta los aspectos positivos del programa
             </p>
         </a>
     </div>
@@ -117,8 +107,7 @@
             <img class="img-fluid" src="/assets/idea-icon.png" />
             <h3>Se me ocurre que</h3>
             <p>
-                Descripción corta de la sección Descripción corta de la secciónDescripción
-                corta de la sección Descripción corta de la
+            Queremos conocer tus ideas y propuestas que nos permitan avanzar en armonía
             </p>
         </a>
     </div>
@@ -132,8 +121,7 @@
             <img class="img-fluid" src="/assets/bulletin-icon.png" />
             <h3>Boletines</h3>
             <p>
-                Descripción corta de la sección Descripción corta de la secciónDescripción
-                corta de la sección Descripción corta de la
+            Las noticias más relevantes de los avances de los proyectos
             </p>
         </a>
     </div>
@@ -142,8 +130,7 @@
             <img class="img-fluid" src="/assets/calendar-icon.png" />
             <h3>Eventos</h3>
             <p>
-                Descripción corta de la sección Descripción corta de la secciónDescripción
-                corta de la sección Descripción corta de la
+            Te contamos que estamos haciendo para seguir creciendo en armonía
             </p>
         </a>
     </div>

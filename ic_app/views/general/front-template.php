@@ -1,5 +1,5 @@
 <?php $this->load->view('general/header') ?>
-    <div class="main-cont col-lg-11 col-md-11 col-sm-12 col-xs-12">
+    <div class="main-cont container-fluid">
         <!-- main menu -->
         <?php $this->load->view('front/top'); ?>
         <!-- main content -->

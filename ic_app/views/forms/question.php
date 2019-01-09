@@ -6,6 +6,8 @@
         </h1>
     <?php else: ?>
         <h1>Escríbanos sus preguntas</h1>
+        <div class="clear-25"></div>
+
     <?php endif ?>
     <?php echo form_open('/front/askquestion') ?>
         <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-12">

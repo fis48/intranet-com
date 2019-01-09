@@ -74,7 +74,8 @@ th {
 
 .q-data {
     border-bottom: 1px solid #DDD;
-    padding-bottom: 5px;
+    padding: 15px 25px;
+    border-radius: 5px;
 }
 
 .left-text {
@@ -129,6 +130,12 @@ input, label {
     height: 1px;
 }
 
+.clear-25 {
+    float: left;
+    width: 100%;
+    height: 25px;
+}
+
 .clear-1-solid {
     float: left;
     width: 100%;
@@ -154,6 +161,10 @@ input, label {
 .resp-btn {
     background-color: #DDD;
     color: #000;
+}
+
+.edit-q {
+    margin-top: 5px;
 }
 
 .subtype-sel {

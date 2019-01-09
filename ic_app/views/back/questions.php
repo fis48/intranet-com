@@ -1,5 +1,6 @@
 <!-- unresolved -->
 <div class="container-fluid">
+    <div class="clear-25"></div>
     <h1 class="section-title">
         <i class="fa fa-question-circle fa-sm"></i>
         Preguntas
@@ -80,7 +81,7 @@
                     </th>
                     <th>
                         <i class="fa fa-marker"></i><br>
-                        Actualizar respuesta
+                        Actualizar
                     </th>
                     <th>
                         <i class="fa fa-check"></i><br>
@@ -108,10 +109,10 @@
                 </td>
                 <td><?php echo $rQuestion->source ?></td>
                 <td>
-                    <a href="<?php echo '/admin/responseupdate/'.$rQuestion->id ?>"
-                        class="resp-btn btn btn-primary btn-sm float-right">
-                        <i class="fa fa-exchange-alt"></i>
-                        Acutalizar respuesta
+                    <a href="<?php echo '/admin/questionupdate/'.$rQuestion->id ?>"
+                        class="resp-btn edit-q btn btn-primary btn-sm float-right">
+                        <i class="fa fa-marker"></i>
+                        Actualizar pregunta
                     </a>
                 </td>
                 <td>

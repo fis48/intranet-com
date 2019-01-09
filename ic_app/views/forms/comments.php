@@ -1,4 +1,7 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h1>Escríbanos sus comentarios</h1>
+    <div class="clear-25"></div>
+
     <?php echo form_open('/front/askquestion') ?>
         <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <!-- full name -->
@@ -15,15 +18,15 @@
             <label for="id_number">No. Identificación</label>
             <input name="id_number" type="text" required class="form-control">
         </div>
-        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <!-- city -->
-            <label for="city">Ciudad</label>
-            <input name="city" type="text" required class="form-control">
-        </div>
-        <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-12">
             <!-- headq -->
             <label for="headq">Sede</label>
-            <input name="headq" type="text" required class="form-control">
+            <select name="headq" class="form-control" required>
+                <option value="" disabled selected="">Seleccione una</option>
+                <option value="sede">sede</option>
+                <option value="sede">sede</option>
+                <option value="sede">sede</option>
+            </select>
         </div>
         <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <!-- type -->

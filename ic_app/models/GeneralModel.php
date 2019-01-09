@@ -19,7 +19,8 @@ class GeneralModel extends CI_Model {
     }
     // items list
     public function getSimpleItems($tableName)
-    {
+    {   
+        $this->db->order_by('id', 'desc');
         return $this->db->get($tableName)->result();
     }
     // last item
@@ -153,7 +154,7 @@ class GeneralModel extends CI_Model {
 
     }
     // get all questions
-    public function getQuestions()
+    public function getQuestions($seeAll = false)
     {
         $questions = new StdClass();
         $questions->unresolved  = array();
@@ -161,6 +162,9 @@ class GeneralModel extends CI_Model {
         // raw questions
         $this->db->where('is_comment', 0);
         $this->db->where('is_public', 1);
+        if ($seeAll == false) {
+            $this->db->limit(5);
+        }
         $rawQuestions = $this->db->get('questions')->result();
         foreach ($rawQuestions as $rQuestion) {
             if ($rQuestion->response_date == NULL) {
@@ -220,6 +224,19 @@ class GeneralModel extends CI_Model {
         $this->db->where('id', $postData['q_id']);
         // notify question update to asker
         $this->sendNotification('q-response-update', $postData);
+        return $this->db->get('questions')->row();
+    }
+    // question update
+    public function questionUpdate($postData)
+    {
+        $this->db->where('id', $postData['q_id']);
+        $arrUpd = array(
+            'question'  => $postData['question'],
+            'response'  => $postData['response'],
+            'source'  => $postData['source']
+        );
+        $this->db->update('questions', $arrUpd);
+        $this->db->where('id', $postData['q_id']);
         return $this->db->get('questions')->row();
     }
     // get comments
@@ -283,6 +300,22 @@ class GeneralModel extends CI_Model {
         );
         $this->db->insert('events', $arrIns);
         return $this->getLastItem('events');
+    }
+    // add projects
+    public function addProject($postData, $filesData)
+    {
+
+        // upload image
+        move_uploaded_file($filesData['image']['tmp_name'],
+            $this->config->item('projectsUpload').$filesData['image']['name']);
+        // register new
+        $arrIns = array(
+            'title' => $postData['title'],
+            'description'  => $postData['description'],
+            'image'     => $filesData['image']['name']
+        );
+        $this->db->insert('projects', $arrIns);
+        return $this->getLastItem('projects');
     }
     // set public
     function setPublic($postData)
