@@ -116,7 +116,7 @@
                     <h4><?php echo $news[0]->title ?></h4>
                     <p><?php echo substr($news[0]->description, 0, 125).'...' ?></p>
                 <?php else: ?>
-                    <span>No hay boletines publicadas</span>
+                    <span>No hay boletines publicados</span>
                 <?php endif ?>
             </li>
         </ul>
@@ -136,6 +136,7 @@
         </h3>
         <ul>
             <li>
+                <?php if (isset($events[0])): ?>
                 <?php $evIniDate = new Datetime($events[0]->date_ini); ?>
                 <?php $evEndDate = new Datetime($events[0]->date_end); ?>
                 <span>
@@ -150,6 +151,9 @@
                 </span>
                 <h4><?php echo $events[0]->title ?></h4>
                 <p><?php echo substr($events[0]->description, 0, 125).'...' ?></p>
+                <?php else: ?>
+                    <span>No hay eventos publicados</span>
+                <?php endif ?>
             </li>
         </ul>
     </div>
