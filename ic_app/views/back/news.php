@@ -5,7 +5,13 @@
     </h1>
     <?php foreach ($news as $new): ?>
         <div class="cont-new container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="float-left col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <h2><?php echo $new->title ?></h2>
+            <a href="<?php echo '/admin/updatenews/'.$new->id ?>" class="resp-btn btn btn-default btn-sm">
+                <i class="fa fa-marker"> </i>
+                Actualizar
+            </a>
+            <div class="clear-10"></div>
+            <div class="float-left no-padd col-lg-2 col-md-2 col-sm-2 col-xs-12">
                 <img src="<?php echo $new->image ?>"
                     class="img-fluid img-thumbnail">
             </div>

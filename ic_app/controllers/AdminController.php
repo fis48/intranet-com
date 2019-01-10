@@ -292,6 +292,27 @@ class AdminController extends CI_Controller {
         $data['mainContent']    = 'forms/news';
         $this->load->view('general/back-template', $data);
     }
+    // update new
+    public function updateNews()
+    {
+        $logged = $this->session->userdata('admin');
+        if (!$logged) {
+            $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
+            redirect('/admin/', 'refresh');
+        }
+        // post
+        if ($this->input->post()) {
+            $this->GeneralModel->updateNews($this->input->post(), $_FILES);
+            $this->session->set_flashdata('msg', 'Boletín guardado.');
+            // redirect('/admin/news', 'refresh');
+        }
+        // default
+        $data['logged']     = $this->session->userdata('admin');
+        $data['new']    = $this->GeneralModel->getSimpleItem('news', $this->uri->segment(3));
+        $data['now']    = new Datetime();
+        $data['mainContent']    = 'forms/news';
+        $this->load->view('general/back-template', $data);
+    }
     // events
     public function events()
     {
@@ -317,6 +338,27 @@ class AdminController extends CI_Controller {
         }
         // default
         $data['logged'] = $this->session->userdata('admin');
+        $data['now']    = new Datetime();
+        $data['mainContent']    = 'forms/events';
+        $this->load->view('general/back-template', $data);
+    }
+    // update event
+    public function updateEvents()
+    {
+        $logged = $this->session->userdata('admin');
+        if (!$logged) {
+            $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
+            redirect('/admin/', 'refresh');
+        }
+        // post
+        if ($this->input->post()) {
+            $this->GeneralModel->updateEvent($this->input->post(), $_FILES);
+            $this->session->set_flashdata('msg', 'Evento guardado.');
+            redirect('/admin/events', 'refresh');
+        }
+        // default
+        $data['logged']     = $this->session->userdata('admin');
+        $data['event']  = $this->GeneralModel->getSimpleItem('events', $this->uri->segment(3));
         $data['now']    = new Datetime();
         $data['mainContent']    = 'forms/events';
         $this->load->view('general/back-template', $data);
@@ -355,7 +397,43 @@ class AdminController extends CI_Controller {
         $data['mainContent']    = 'forms/projects';
         $this->load->view('general/back-template', $data);
     }
+    // update project
+    public function updateProject()
+    {
+        $logged = $this->session->userdata('admin');
+        if (!$logged) {
+            $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
+            redirect('/admin/', 'refresh');
+        }
+        // post
+        if ($this->input->post()) {
+            $this->GeneralModel->updateProject($this->input->post(), $_FILES);
+            $this->session->set_flashdata('msg', 'Proyecto guardado.');
+            redirect('/admin/projects', 'refresh');
+        }
+        // default
+        $data['logged']     = $this->session->userdata('admin');
+        $data['project']    = $this->GeneralModel->getSimpleItem('projects', $this->uri->segment(3));
+        $data['now']    = new Datetime();
+        $data['mainContent']    = 'forms/projects';
+        $this->load->view('general/back-template', $data);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

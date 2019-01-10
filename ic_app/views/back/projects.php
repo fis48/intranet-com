@@ -5,6 +5,12 @@
     </h1>
     <?php foreach ($projects as $project): ?>
         <div class="cont-new container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h2><?php echo $project->title ?></h2>
+            <a href="<?php echo '/admin/updateproject/'.$project->id ?>" class="resp-btn btn btn-default btn-sm">
+                <i class="fa fa-marker"> </i>
+                Actualizar
+            </a>
+            <div class="clear-10"></div>
             <div class="float-left col-lg-2 col-md-2 col-sm-2 col-xs-12">
                 <img src="<?php echo '/projects/'.$project->image ?>"
                     class="img-fluid img-thumbnail">
@@ -13,6 +19,5 @@
                 <p><?php echo $project->description ?></p>
             </div>
         </div>
-        <div class="clear-1"></div>
     <?php endforeach ?>
 </div>

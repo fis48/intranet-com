@@ -281,6 +281,17 @@ class GeneralModel extends CI_Model {
         $this->db->insert('news', $postData);
         return $this->getLastItem('news');
     }
+    // update news
+    public function updateNews($postData, $filesData)
+    {
+        // register
+        $arrIns['title']    = $postData['title'];
+        $arrIns['description']  = $postData['description'];
+        $arrIns['body'] = $postData['body'];
+        $this->db->where('id', $postData['id']);
+        $this->db->update('news', $arrIns);
+        return $this->getLastItem('news');
+    }
     // add events
     public function addEvent($postData, $filesData)
     {
@@ -301,10 +312,28 @@ class GeneralModel extends CI_Model {
         $this->db->insert('events', $arrIns);
         return $this->getLastItem('events');
     }
+    // update event
+    public function updateEvent($postData, $filesData)
+    {
+        if ($filesData['image']['size'] > 0) {
+            // upload image
+            move_uploaded_file($filesData['image']['tmp_name'],
+                $this->config->item('eventsUpload').$filesData['image']['name']);
+            $arrIns['image']    = $filesData['image']['name'];
+        }
+        // register
+        $arrIns['title']    = $postData['title'];
+        $arrIns['location'] = $postData['location'];
+        $arrIns['description']  = $postData['description'];
+        $arrIns['date_ini'] = $postData['date_ini'];
+        $arrIns['date_end'] = $postData['date_end'];
+        $this->db->where('id', $postData['id']);
+        $this->db->update('events', $arrIns);
+        return $this->getLastItem('events');
+    }
     // add projects
     public function addProject($postData, $filesData)
     {
-
         // upload image
         move_uploaded_file($filesData['image']['tmp_name'],
             $this->config->item('projectsUpload').$filesData['image']['name']);
@@ -315,6 +344,22 @@ class GeneralModel extends CI_Model {
             'image'     => $filesData['image']['name']
         );
         $this->db->insert('projects', $arrIns);
+        return $this->getLastItem('projects');
+    }
+    // update project
+    public function updateProject($postData, $filesData)
+    {
+        if ($filesData['image']['size'] > 0) {
+            // upload image
+            move_uploaded_file($filesData['image']['tmp_name'],
+                $this->config->item('projectsUpload').$filesData['image']['name']);
+            $arrIns['image']    = $filesData['image']['name'];
+        }
+        // register
+        $arrIns['title']    = $postData['title'];
+        $arrIns['description']  = $postData['description'];
+        $this->db->where('id', $postData['id']);
+        $this->db->update('projects', $arrIns);
         return $this->getLastItem('projects');
     }
     // set public
