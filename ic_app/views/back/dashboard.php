@@ -146,8 +146,8 @@
                 <br>
                 <span>
                     <i class="fa fa-clock"></i>
-                    <?php echo strftime('%H:%I', $evIniDate->getTimestamp()).' - '.
-                        strftime('%H:%I', $evEndDate->getTimestamp()) ?>
+                    <?php echo strftime('%H:%M', $evIniDate->getTimestamp()).' - '.
+                        strftime('%H:%M', $evEndDate->getTimestamp()) ?>
                 </span>
                 <h4><?php echo $events[0]->title ?></h4>
                 <p><?php echo substr($events[0]->description, 0, 125).'...' ?></p>

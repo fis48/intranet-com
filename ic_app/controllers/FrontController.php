@@ -30,7 +30,12 @@ class FrontController extends CI_Controller {
         $data['mainContent']    = 'front/glossary';
         $this->load->view('general/front-template', $data);
     }
-
+    // ajjax get full meaning info
+    public function getGlossaryWord()
+    {
+        $word = $this->GeneralModel->getSimpleItem('glossary', $this->input->post("wordId"));
+        echo json_encode($word);
+    }
     // questions
     public function questions()
     {

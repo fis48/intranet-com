@@ -233,7 +233,8 @@ class GeneralModel extends CI_Model {
         $arrUpd = array(
             'question'  => $postData['question'],
             'response'  => $postData['response'],
-            'source'  => $postData['source']
+            'source'  => $postData['source'],
+            'response_update_date'  => $postData['response_update_date']
         );
         $this->db->update('questions', $arrUpd);
         $this->db->where('id', $postData['q_id']);
@@ -287,6 +288,7 @@ class GeneralModel extends CI_Model {
         // register
         $arrIns['title']    = $postData['title'];
         $arrIns['description']  = $postData['description'];
+        $arrIns['image']    = '/news/'.$this->session->userdata("temp_bull_img");
         $arrIns['body'] = $postData['body'];
         $this->db->where('id', $postData['id']);
         $this->db->update('news', $arrIns);

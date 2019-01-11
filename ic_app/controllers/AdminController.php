@@ -117,6 +117,8 @@ class AdminController extends CI_Controller {
         // post
         if ($this->input->post()) {
             $this->GeneralModel->updateWord($this->input->post());
+            $this->session->set_flashdata('msg', 'Glosario actualizado.');
+            redirect('/admin/glossary', 'refresh');
         }
         // default
         $data['logged'] = $this->session->userdata('admin');
@@ -304,7 +306,7 @@ class AdminController extends CI_Controller {
         if ($this->input->post()) {
             $this->GeneralModel->updateNews($this->input->post(), $_FILES);
             $this->session->set_flashdata('msg', 'Boletín guardado.');
-            // redirect('/admin/news', 'refresh');
+            redirect('/admin/news', 'refresh');
         }
         // default
         $data['logged']     = $this->session->userdata('admin');
@@ -316,6 +318,7 @@ class AdminController extends CI_Controller {
     // events
     public function events()
     {
+        setlocale(LC_ALL, 'es_ES');
         $data['logged'] = $this->session->userdata('admin');
         $data['now']    = new Datetime();
         $data['events'] = $this->GeneralModel->getSimpleItems('events');

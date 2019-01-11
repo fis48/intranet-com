@@ -29,11 +29,20 @@ Aquí encontrarás  los términos que enmarcan y definen los diferentes proyecto
 <!-- glossary -->
 <section id="glossary">
     <?php foreach ($glossary as $gItem): ?>
-        <div class="glossary-card col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="glossary-card col-lg-6 col-md-6 col-sm-6 col-xs-12" data-word-id="<?php echo $gItem->id ?>">
             <h3><?php echo $gItem->word ?></h3>
-            <p><?php echo $gItem->meaning ?></p>
+            <p data-word-id="<?php echo $gItem->id ?>"><?php echo substr($gItem->meaning, 0, 200).'...' ?></p>
+            <a href="#" data-word-id="<?php echo $gItem->id ?>">Ver más</a>
         </div>
     <?php endforeach ?>
+    <div class="glossary-display">
+        <h2></h2>
+        <p></p>
+        <a href="#">
+            <i class="fa fa-close"></i>
+            Cerrar
+        </a>
+    </div>
 </section>
 
 

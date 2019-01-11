@@ -40,11 +40,13 @@
     <h2 class="section-title">Programa de transformación</h2>
     <!-- projects -->
     <div class="icon-card col-lg-4 col-md-4 col-sm-4 col-xs-12">
-        <img class="img-fluid" src="/assets/projects-icon.png" />
-        <h3>Los proyectos</h3>
-        <p>
-        Conoce en qué consisten los diferentes proyectos del programa de transformación
-        </p>
+        <a href="/proyectos">
+            <img class="img-fluid" src="/assets/projects-icon.png" />
+            <h3>Los proyectos</h3>
+            <p>
+            Conoce en qué consisten los diferentes proyectos del programa de transformación
+            </p>
+        </a>
     </div>
     <!-- who -->
     <div class="icon-card col-lg-4 col-md-4 col-sm-4 col-xs-12">

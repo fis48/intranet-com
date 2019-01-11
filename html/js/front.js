@@ -16,7 +16,28 @@ $(document).ready(function(){
     // who see more
     $(".who-card a").on('click', function(e){
         e.preventDefault();
-        // $(".who-card p span").toggle(500);
         $(this).prev("span").toggle(500);
+    });
+    // glossary see more
+    $(".glossary-card a").on("click", function(e){
+        e.preventDefault();
+        $.post(
+            '/front/getGlossaryWord',
+            {
+                wordId: $(this).attr("data-word-id")
+            },
+            function(res)
+            {
+                var word = JSON.parse(res);
+                $(".glossary-display").fadeIn();
+                $(".glossary-display h2").text(word.word);
+                $(".glossary-display p").text(word.meaning);
+                // close
+                $(".glossary-display a").on("click", function(e){
+                    e.preventDefault();
+                    $(".glossary-display").fadeOut();
+                });
+            }
+        );
     });
 });
