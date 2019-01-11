@@ -7,8 +7,7 @@
             <img class="img-fluid" src="/assets/questions-icon.png" />
             <h3>Preguntas</h3>
             <p>
-                Descripción corta de la sección Descripción corta de la secciónDescripción
-                corta de la sección Descripción corta de la
+                Respondemos tus inquietudes
             </p>
         </a>
     </div>
@@ -18,8 +17,7 @@
             <img class="img-fluid" src="/assets/worry-icon.png" />
             <h3>Me preocupa que</h3>
             <p>
-                Descripción corta de la sección Descripción corta de la secciónDescripción
-                corta de la sección Descripción corta de la
+                Cuéntanos lo que te preocupa
             </p>
         </a>
     </div>
@@ -29,8 +27,7 @@
             <img class="img-fluid" src="/assets/like-icon.png" />
             <h3>Me gusta que</h3>
             <p>
-                Descripción corta de la sección Descripción corta de la secciónDescripción
-                corta de la sección Descripción corta de la
+                Resalta los aspectos positivos del programa
             </p>
         </a>
     </div>
@@ -40,8 +37,7 @@
             <img class="img-fluid" src="/assets/idea-icon.png" />
             <h3>Se me ocurre que</h3>
             <p>
-                Descripción corta de la sección Descripción corta de la secciónDescripción
-                corta de la sección Descripción corta de la
+                Queremos conocer tus ideas y propuestas que nos permitan avanzar en armonía
             </p>
         </a>
     </div>
