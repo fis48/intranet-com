@@ -177,6 +177,10 @@ a:hover {
     padding: 45px 15px;
 }
 
+.who-card {
+    min-height: 685px;
+}
+
 .who-card p {
     text-align: justify;
     padding: 0 15px;
@@ -200,6 +204,10 @@ a:hover {
 
 .who-card a:hover {
     font-weight: bold;
+}
+
+.who-card img {
+    border-radius: 50%;
 }
 
 .glossary-card {
