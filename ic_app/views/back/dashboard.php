@@ -182,6 +182,48 @@
     </div>
 </div>
 
+<div class="container-fluid back-section">
+    <!-- team -->
+    <div class="back-card float-left col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <h2>
+            <i class="fa fa-user-circle fa-sm"></i>
+            Quién es Quién
+            <span class="badge badge-pill badge-secondary"><?php echo count($team) ?></span>
+        </h2>
+        <a href="/admin/addteam" class="btn btn-sm">Agregar persona</a>
+        <a href="/admin/team" class="btn btn-sm">Ver todo</a>
+    </div>
+    <!-- slide home -->
+    <div class="back-card float-left col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <h2>
+            <i class="fa fa-image"></i>
+            Slide home
+            <span class="badge badge-pill badge-secondary"><?php //echo count($slide) ?></span>
+        </h2>
+        <a href="/admin/addslide" class="btn btn-sm">Agregar imagen</a>
+        <a href="/admin/slide" class="btn btn-sm">Ver todo</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

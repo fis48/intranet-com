@@ -22,7 +22,8 @@ class AdminController extends CI_Controller {
         }
         $data['logged'] = $logged;
         $data['glossary']   = $this->GeneralModel->getSimpleItems('glossary');
-        $data['events']   = $this->GeneralModel->getSimpleItems('events');
+        $data['events'] = $this->GeneralModel->getSimpleItems('events');
+        $data['team']   = $this->GeneralModel->getSimpleItems('team', 'order', 'asc');
         $data['projects']   = $this->GeneralModel->getSimpleItems('projects');
         $data['questions']  = $this->GeneralModel->getQuestionsFromAdmin();
         $data['news']   = $this->GeneralModel->getNews();
@@ -106,7 +107,7 @@ class AdminController extends CI_Controller {
         $data['mainContent']    = 'back/glossary';
         $this->load->view('general/back-template', $data);
     }
-    // glossaru edit
+    // glossary edit
     public function glossaryEdit()
     {
         $logged = $this->session->userdata('admin');
@@ -161,6 +162,11 @@ class AdminController extends CI_Controller {
     {
         $setp = $this->GeneralModel->setPublic($this->input->post());
         echo json_encode($setp);
+    }
+    // ajax set team order
+    public function setTeamOrder()
+    {
+        $this->GeneralModel->setTeamOrder($this->input->post());
     }
     // question response
     public function questionResponse()
@@ -421,6 +427,133 @@ class AdminController extends CI_Controller {
         $data['mainContent']    = 'forms/projects';
         $this->load->view('general/back-template', $data);
     }
+    // team
+    public function team()
+    {
+        $logged = $this->session->userdata('admin');
+        if (!$logged) {
+            $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
+            redirect('/admin/', 'refresh');
+        }
+        $data['logged'] = $this->session->userdata('admin');
+        $data['now']    = new Datetime();
+        $data['team']   = $this->GeneralModel->getSimpleItems('team', "order", "asc");
+        $data['mainContent']    = 'back/team';
+        $this->load->view('general/back-template', $data);
+    }
+    // add team
+    public function addTeam()
+    {
+        $logged = $this->session->userdata('admin');
+        if (!$logged) {
+            $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
+            redirect('/admin/', 'refresh');
+        }
+        // post
+        if ($this->input->post()) {
+            $added = $this->GeneralModel->addTeam($this->input->post(), $_FILES);
+            $this->session->set_flashdata('msg', 'Persona guardada.');
+            redirect('/admin/team', 'refresh');
+        }
+        // default form
+        $data['logged'] = $this->session->userdata('admin');
+        $data['formTitle'] = 'Agregar persona';
+        $data['mainContent']    = 'forms/team';
+        $this->load->view('general/back-template', $data);
+    }
+    // team update
+    public function updateTeam()
+    {
+        $logged = $this->session->userdata('admin');
+        if (!$logged) {
+            $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
+            redirect('/admin/', 'refresh');
+        }
+        // post
+        if ($this->input->post()) {
+            $this->GeneralModel->updateTeam($this->input->post(), $_FILES);
+            $this->session->set_flashdata('msg', 'Registro actualizado.');
+            redirect('/admin/team', 'refresh');
+        }
+        // default
+        $data['logged']     = $this->session->userdata('admin');
+        $data['team']   = $this->GeneralModel->getSimpleItem('team', $this->uri->segment(3));
+        $data['now']    = new Datetime();
+        $data['formTitle'] = 'Actualizar persona';
+        $data['mainContent']    = 'forms/team';
+        $this->load->view('general/back-template', $data);
+    }
+    // team delete
+    public function teamDelete()
+    {
+        $this->GeneralModel->itemDelete('team', $this->uri->segment(3));
+        $this->session->set_flashdata('msg', 'Registro eliminado.');
+        redirect('/admin/team', 'refresh');
+    }
+    // slide
+    public function slide()
+    {
+        $logged = $this->session->userdata('admin');
+        if (!$logged) {
+            $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
+            redirect('/admin/', 'refresh');
+        }
+        $data['logged'] = $this->session->userdata('admin');
+        $data['now']    = new Datetime();
+        $data['slide']  = $this->GeneralModel->getSimpleItems('slide', 'id', 'asc');
+        $data['mainContent']    = 'back/slide';
+        $this->load->view('general/back-template', $data);
+    }
+    // add slide
+    public function addSlide()
+    {
+        $logged = $this->session->userdata('admin');
+        if (!$logged) {
+            $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
+            redirect('/admin/', 'refresh');
+        }
+        // post
+        if ($this->input->post()) {
+            $added = $this->GeneralModel->addSlide($this->input->post(), $_FILES);
+            $this->session->set_flashdata('msg', 'Imagen guardada.');
+            redirect('/admin/slide', 'refresh');
+        }
+        // default form
+        $data['logged'] = $this->session->userdata('admin');
+        $data['formTitle'] = 'Agregar slide';
+        $data['mainContent']    = 'forms/home-slide';
+        $this->load->view('general/back-template', $data);
+    }
+    // slide update
+    public function updateSlide()
+    {
+        $logged = $this->session->userdata('admin');
+        if (!$logged) {
+            $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
+            redirect('/admin/', 'refresh');
+        }
+        // post
+        if ($this->input->post()) {
+            $this->GeneralModel->updateSlide($this->input->post(), $_FILES);
+            $this->session->set_flashdata('msg', 'Registro actualizado.');
+            redirect('/admin/slide', 'refresh');
+        }
+        // default
+        $data['logged']     = $this->session->userdata('admin');
+        $data['slide']  = $this->GeneralModel->getSimpleItem('slide', $this->uri->segment(3));
+        $data['now']    = new Datetime();
+        $data['formTitle'] = 'Actualizar slide';
+        $data['mainContent']    = 'forms/home-slide';
+        $this->load->view('general/back-template', $data);
+    }
+    // slide delete
+    public function slideDelete()
+    {
+        $this->GeneralModel->itemDelete('slide', $this->uri->segment(3));
+        $this->session->set_flashdata('msg', 'Registro eliminado.');
+        redirect('/admin/slide', 'refresh');
+    }
+
 }
 
 

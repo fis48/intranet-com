@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    
     // bulletin redactor
     $R('#bull-body', {
         imageUpload: '/admin/addnews',
@@ -37,4 +37,19 @@ $(document).ready(function(){
             }
         );
     });
+
+    // team order
+    $("input[name='order']").on("change", function(){
+        $.post(
+            '/admin/setTeamOrder',
+            {
+                teamId: $(this).attr("data-team-id"),
+                order: $(this).val()
+            },
+            function(res) {
+                alert("El orden ha sido actualizado.");
+                window.location = "/admin/team";
+            }
+        );
+    })
 });

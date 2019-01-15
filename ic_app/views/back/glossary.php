@@ -5,7 +5,7 @@
     </h1>
     <dl class="glossary">
         <?php foreach ($glossary as $word): ?>
-        <div class="container-fluid col-lg-11 col-md-11 col-sm-11 col-xs-12">
+        <div class="container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <dt><?php echo $word->word ?></dt>
             <dd><?php echo $word->meaning ?></dd>
             <a href="<?php echo '/admin/glossaryedit/'.$word->id ?>" class="btn-sm btn btn-primary">

@@ -12,6 +12,7 @@ class FrontController extends CI_Controller {
     // index
     public function index()
     {
+        $data['mainImg']    = $this->GeneralModel->getSectionImg('home');
         $data['mainContent']    = 'front/index';
         $this->load->view('general/front-template', $data);
     }
@@ -19,6 +20,8 @@ class FrontController extends CI_Controller {
     // who
     public function who()
     {
+        $data['mainImg']    = $this->GeneralModel->getSectionImg('who');
+        $data['team']   = $this->GeneralModel->getSimpleItems('team');
         $data['mainContent']    = 'front/who';
         $this->load->view('general/front-template', $data);
     }
@@ -26,15 +29,22 @@ class FrontController extends CI_Controller {
     // glossary
     public function glossary()
     {
+        $data['mainImg']    = $this->GeneralModel->getSectionImg('glossary');
         $data['glossary']   = $this->GeneralModel->getSimpleItems('glossary');
         $data['mainContent']    = 'front/glossary';
         $this->load->view('general/front-template', $data);
     }
-    // ajjax get full meaning info
+    // ajax get full meaning info
     public function getGlossaryWord()
     {
         $word = $this->GeneralModel->getSimpleItem('glossary', $this->input->post("wordId"));
         echo json_encode($word);
+    }
+    // ajax get full team item
+    public function getTeamItem()
+    {
+        $team = $this->GeneralModel->getSimpleItem('team', $this->input->post("teamId"));
+        echo json_encode($team);
     }
     // questions
     public function questions()
@@ -116,6 +126,7 @@ class FrontController extends CI_Controller {
     // news
     public function news()
     {
+        $data['mainImg']    = $this->GeneralModel->getSectionImg('news');
         $data['news']   = $this->GeneralModel->getSimpleItems('news');
         $data['mainContent']    = 'front/news';
         $this->load->view('general/front-template', $data);
@@ -131,6 +142,7 @@ class FrontController extends CI_Controller {
     // events
     public function events()
     {
+        $data['mainImg']    = $this->GeneralModel->getSectionImg('events');
         $data['events']   = $this->GeneralModel->getSimpleItems('events');
         $data['mainContent']    = 'front/events';
         $this->load->view('general/front-template', $data);
@@ -146,6 +158,7 @@ class FrontController extends CI_Controller {
     // projects
     public function projects()
     {
+        $data['mainImg']    = $this->GeneralModel->getSectionImg('projects');
         $data['projects']   = $this->GeneralModel->getSimpleItems('projects');
         $data['mainContent']    = 'front/projects';
         $this->load->view('general/front-template', $data);

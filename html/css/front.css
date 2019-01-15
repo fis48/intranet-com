@@ -134,23 +134,31 @@ a:hover {
     display: block;
 }
 
-#main-banner.home {
-    background: url('/assets/banner-home.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+#main-banner {
+    position: relative;
+    max-height: 600px;
+    overflow-y: hidden;
 }
 
+#main-banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*
 #main-banner.who {
     background: url('/assets/banner-who.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 #main-banner.news {
     background: url('/assets/banner-news.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
+*/
 
 #foot-banner p {
     color: #FFF;
@@ -226,14 +234,25 @@ a:hover {
     text-decoration: underline;
 }
 
-.glossary-display {
-    position: absolute;
+.glossary-display,
+.team-display {
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1;
     width: 100%;
     height: 100%;
     display: none;
     padding: 10% 20%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.team-display img {
+    border-radius: 50%;
+}
+
+.close-btn {
+    background-color: #003056;
 }
 
 .glossary-display p {

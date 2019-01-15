@@ -40,4 +40,36 @@ $(document).ready(function(){
             }
         );
     });
+    // who see more
+    $(".who-card a").on("click", function(e){
+        e.preventDefault();
+        $.post(
+            '/front/getTeamItem',
+            {
+                teamId: $(this).attr("data-team-id")
+            },
+            function(res)
+            {
+                var team = JSON.parse(res);
+                $(".team-display").fadeIn();
+                $(".team-display img").attr('src', 'team/'+team.image);
+                $(".team-display h2").text(team.name+' '+team.last_name);
+                $(".team-display p").text(team.description);
+                // close
+                $(".team-display a").on("click", function(e){
+                    e.preventDefault();
+                    $(".team-display").fadeOut();
+                });
+            }
+        );
+    });
 });
+
+
+
+
+
+
+
+
+

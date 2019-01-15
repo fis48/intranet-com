@@ -18,9 +18,9 @@ class GeneralModel extends CI_Model {
         return $this->db->get($tableName)->row();
     }
     // items list
-    public function getSimpleItems($tableName)
+    public function getSimpleItems($tableName, $orderField = "id", $dir = "desc")
     {   
-        $this->db->order_by('id', 'desc');
+        $this->db->order_by($orderField, $dir);
         return $this->db->get($tableName)->result();
     }
     // last item
@@ -38,6 +38,14 @@ class GeneralModel extends CI_Model {
         $this->db->where('id', $itemId);
         $this->db->delete($table);
         return $deleted;
+    }
+    // get section image
+    public function getSectionImg($sName)
+    {
+        $this->db->where('section', $sName);
+        $this->db->limit(1);
+        $image = $this->db->get('slide')->row();
+        return $image->image;
     }
     // login
     public function login($postData)
@@ -380,6 +388,90 @@ class GeneralModel extends CI_Model {
         }
         $this->db->update('questions', $arrUpd);
         return $this->getSimpleItem('questions', $postData['qId']);
+    }
+    // set team order
+    public function setTeamOrder($postData)
+    {
+        $this->db->where('id', $postData['teamId']);
+        $arrUpd = array(
+            'order' => $postData['order']
+        );
+        $this->db->update('team', $arrUpd);
+    }
+    // add team
+    public function addTeam($postData, $filesData)
+    {
+        if (!empty($filesData)) {
+            // upload image
+            move_uploaded_file($filesData['image']['tmp_name'],
+                $this->config->item('teamUpload').$filesData['image']['name']);
+            $arrIns['image'] = $filesData['image']['name'];
+        }
+
+        // register new
+        $arrIns['name'] = $postData['name'];
+        $arrIns['last_name'] = $postData['last_name'];
+        $arrIns['description']  = $postData['description'];
+        $this->db->insert('team', $arrIns);
+        return $this->getLastItem('team');
+    }
+
+    // update team
+    public function updateTeam($postData, $filesData)
+    {
+        if (isset($filesData['image'])) {
+            if ($filesData['image']['size'] > 0) {
+                // upload image
+                move_uploaded_file($filesData['image']['tmp_name'],
+                    $this->config->item('teamUpload').$filesData['image']['name']);
+                $arrIns['image']    = $filesData['image']['name'];
+            }
+        }
+        // register
+        $arrIns['name'] = $postData['name'];
+        $arrIns['last_name'] = $postData['last_name'];
+        $arrIns['description']  = $postData['description'];
+        $this->db->where('id', $postData['id']);
+        $this->db->update('team', $arrIns);
+        return $this->getLastItem('team');  
+    }
+
+    // add slide
+    public function addSlide($postData, $filesData)
+    {
+        if (isset($filesData['image'])) {
+            if ($filesData['image']['size'] > 0) {
+                // upload image
+                move_uploaded_file($filesData['image']['tmp_name'],
+                    $this->config->item('slideUpload').$filesData['image']['name']);
+                $arrIns['image']    = $filesData['image']['name'];
+            }
+        }
+        // register
+        $arrIns['title'] = $postData['title'];
+        $arrIns['description']  = $postData['description'];
+        $arrIns['section']  = $postData['section'];
+        $this->db->insert('slide', $arrIns);
+        return $this->getLastItem('slide');
+    }
+    // update slide
+    public function updateSlide($postData, $filesData)
+    {
+        if (isset($filesData['image'])) {
+            if ($filesData['image']['size'] > 0) {
+                // upload image
+                move_uploaded_file($filesData['image']['tmp_name'],
+                    $this->config->item('slideUpload').$filesData['image']['name']);
+                $arrIns['image']    = $filesData['image']['name'];
+            }
+        }
+        // register
+        $arrIns['title'] = $postData['title'];
+        $arrIns['description']  = $postData['description'];
+        $arrIns['section']  = $postData['section'];
+        $this->db->where('id', $postData['id']);
+        $this->db->update('slide', $arrIns);
+        return $this->getLastItem('slide');  
     }
 }
 

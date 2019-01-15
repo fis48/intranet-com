@@ -128,6 +128,7 @@ input, label {
     float: left;
     width: 100%;
     height: 1px;
+    border: none !important;
 }
 
 .clear-25 {
@@ -251,11 +252,20 @@ input, label {
 
 .glossary dt {
     font-style: italic;
-    font-size: 1.2em;
+    font-size: 1.8em;
 }
 
 .glossary dd {
     padding-left: 25px;
+}
+
+.glossary img {
+    border-radius: 50%;
+    margin-top: -35px;
+}
+
+.no-border {
+    border: 0 !important;
 }
 
 .cont-new {
