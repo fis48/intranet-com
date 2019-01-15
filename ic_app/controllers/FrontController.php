@@ -21,7 +21,7 @@ class FrontController extends CI_Controller {
     public function who()
     {
         $data['mainImg']    = $this->GeneralModel->getSectionImg('who');
-        $data['team']   = $this->GeneralModel->getSimpleItems('team');
+        $data['team']   = $this->GeneralModel->getSimpleItems('team', 'order', 'asc');
         $data['mainContent']    = 'front/who';
         $this->load->view('general/front-template', $data);
     }
