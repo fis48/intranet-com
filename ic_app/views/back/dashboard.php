@@ -187,7 +187,7 @@
     <div class="back-card float-left col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <h2>
             <i class="fa fa-user-circle fa-sm"></i>
-            Quién es Quién
+            ¿Quién es Quién?
             <span class="badge badge-pill badge-secondary"><?php echo count($team) ?></span>
         </h2>
         <a href="/admin/addteam" class="btn btn-sm">Agregar persona</a>
@@ -197,7 +197,7 @@
     <div class="back-card float-left col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <h2>
             <i class="fa fa-image"></i>
-            Slide home
+            Banners secciones
             <span class="badge badge-pill badge-secondary"><?php //echo count($slide) ?></span>
         </h2>
         <a href="/admin/addslide" class="btn btn-sm">Agregar imagen</a>
