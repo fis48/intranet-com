@@ -1,4 +1,4 @@
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="wrap-comments col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <h1>Escríbanos sus comentarios</h1>
     <div class="clear-25"></div>
 

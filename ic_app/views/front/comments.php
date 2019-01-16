@@ -1,5 +1,8 @@
 <!-- banner -->
 <section id="main-banner" class="container-fuid who">
+    <?php if (isset($mainImg)): ?>
+        <img class="img-fluid" src="<?php echo '/home_slide/'.$mainImg ?>">
+    <?php endif ?>
     <!-- text -->
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
         <div class="clear-25"></div>
@@ -20,6 +23,9 @@
 
 <!-- comments form -->
 <?php $this->load->view('forms/comments'); ?>
+
+<div class="clear-25"></div>
+<div class="clear-25"></div>
 
 <section class="gray-back">
     <!-- recent comments -->

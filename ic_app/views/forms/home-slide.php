@@ -31,9 +31,13 @@
                     <?php if($slide->section == "glossary"){echo "selected";} ?>>
                         Glosario
                     </option>
+                    <option value="questions"
+                    <?php if($slide->section == "questions"){echo "selected";} ?>>
+                        Preguntas
+                    </option>
                     <option value="interact"
                     <?php if($slide->section == "interact"){echo "selected";} ?>>
-                        Interactuemos
+                        Comentarios
                     </option>
                     <option value="news"
                     <?php if($slide->section == "news"){echo "selected";} ?>>
@@ -48,7 +52,8 @@
                     <option value="projects">Los proyectos</option>
                     <option value="who">¿Quién es quién?</option>
                     <option value="glossary">Glosario</option>
-                    <option value="interact">Interactuemos</option>
+                    <option value="questions">Preguntas</option>
+                    <option value="interact">Comentarios</option>
                     <option value="news">Boletines</option>
                     <option value="events">Eventos</option>
                 <?php endif ?>

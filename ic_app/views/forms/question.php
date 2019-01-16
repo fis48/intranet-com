@@ -1,4 +1,4 @@
-<div class="float-left col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="wrap-comments float-left col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <?php if ($this->uri->segment(1) == 'admin'): ?>
         <h1>
         <i class="fa fa-question-circle"></i>

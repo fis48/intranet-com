@@ -49,6 +49,7 @@ class FrontController extends CI_Controller {
     // questions
     public function questions()
     {
+        $data['mainImg']    = $this->GeneralModel->getSectionImg('questions');
         $data['now']    = new Datetime();
         $data['questions']  = $this->GeneralModel->getQuestions();
         $data['mainContent']    = 'front/questions';
@@ -86,6 +87,7 @@ class FrontController extends CI_Controller {
     // comments
     public function comments()
     {
+        $data['mainImg']    = $this->GeneralModel->getSectionImg('interact');
         $data['now']    = new Datetime();
         $rawComments = $this->GeneralModel->getComments();
         $selValue = NULL;
@@ -105,6 +107,7 @@ class FrontController extends CI_Controller {
             default:
                 $comments = $rawComments;
         }
+        $data['mainImg']    = $this->GeneralModel->getSectionImg('news');
         $data['comments']   = $comments;
         $data['selValue']   = $selValue;
         $data['mainContent']    = 'front/comments';

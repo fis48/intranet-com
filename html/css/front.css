@@ -271,7 +271,8 @@ a:hover {
 }
 
 .new-card {
-    padding-top: 0;
+    padding: 35px;
+    /*padding-top: 0;*/
     margin-top: -35px;
 }
 
@@ -330,11 +331,14 @@ footer {
     display: none;
     padding: 25px;
     padding-top: 15px;
+    margin-left: 15px;
     border-radius: 5px;
 }
 
 span.info {
-    font-size: 12px;
+    font-size: 30px;
+    margin-top: 30px;
+    font-weight: bold;
 }
 
 .cont-event {
@@ -374,7 +378,13 @@ span.info {
     width: 40%;
 }
 
+.wrap-comments {
+    padding: 60px;
+}
 
+.wrap-comments h1 {
+    padding-left: 15px;
+}
 
 
 
