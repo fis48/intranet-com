@@ -46,6 +46,12 @@ a:hover {
     text-decoration: none;
 }
 
+.flashdata {
+    padding: 25px;
+    background: #000;
+    color: #FFF;
+}
+
 .clear-1 {
     float: left;
     width: 100%;
@@ -285,8 +291,8 @@ a:hover {
 
 .new-card {
     padding: 35px;
-    /*padding-top: 0;*/
     margin-top: -35px;
+    height: 750px;
 }
 
 .new-card p {
