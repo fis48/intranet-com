@@ -1,28 +1,30 @@
 <!-- banner -->
 <section id="main-banner" class="container-fuid home">
     <?php if (isset($mainImg)): ?>
-        <img class="img-fluid" src="<?php echo '/home_slide/'.$mainImg ?>">        
+        <?php $this->load->view('front/slide') ?>
     <?php endif ?>
-    <!-- text -->
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
-        <h1>Programa de transformación</h1>
-        <div class="clear-25"></div>
-        <ul>
-            <li><strong>DO</strong>blar el negocio</li>
-            <li><strong>RE</strong>vitalizar la experiencia del cliente</li>
-            <li><strong>MI</strong>nimizar ineficiencias y Riesgos</li>
-            <li><strong>FA</strong>vorecer el Medio Ambiente</li>
-            <li><strong>SOL</strong>o será posible potenciando nuestro talento</li>
-            <li><strong>ALIANZA</strong> Crece en armonía</li>
-        </ul>
-    </div>
-    <!-- video -->
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
-        <video width="100%" height="100%" controls>
-            <source src="movie.mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
-            Your browser does not support the video tag.
-        </video>
+    <div class="cont-banner-home">
+        <!-- text -->
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
+            <h1>Programa de transformación</h1>
+            <div class="clear-25"></div>
+            <ul>
+                <li><strong>DO</strong>blar el negocio</li>
+                <li><strong>RE</strong>vitalizar la experiencia del cliente</li>
+                <li><strong>MI</strong>nimizar ineficiencias y Riesgos</li>
+                <li><strong>FA</strong>vorecer el Medio Ambiente</li>
+                <li><strong>SOL</strong>o será posible potenciando nuestro talento</li>
+                <li><strong>ALIANZA</strong> Crece en armonía</li>
+            </ul>
+        </div>
+        <!-- video -->
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
+            <video width="100%" height="100%" controls>
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </div>
 </section>
 

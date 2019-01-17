@@ -12,6 +12,7 @@ class FrontController extends CI_Controller {
     // index
     public function index()
     {
+        $data['slides'] = $this->GeneralModel->getSlides();
         $data['mainImg']    = $this->GeneralModel->getSectionImg('home');
         $data['mainContent']    = 'front/index';
         $this->load->view('general/front-template', $data);
@@ -130,7 +131,7 @@ class FrontController extends CI_Controller {
     public function news()
     {
         $data['mainImg']    = $this->GeneralModel->getSectionImg('news');
-        $data['news']   = $this->GeneralModel->getSimpleItems('news');
+        $data['news']   = $this->GeneralModel->getSimpleItems('news', 'date', 'desc');
         $data['mainContent']    = 'front/news';
         $this->load->view('general/front-template', $data);
     }

@@ -145,21 +145,14 @@ class GeneralModel extends CI_Model {
         }
         // send email
         $this->load->library('email');
-        $this->email->from('fidel@MacBook-Pro-de-Fidel-2.local', 'Fidel Silva');
-        $this->email->to('fidel@MacBook-Pro-de-Fidel-2.local');
+        $this->email->from('info@fidelsilva.com', 'Fidel Silva');
+        $this->email->to('diego@cmcanalytics.co');
         $this->email->subject($subject);
         $this->email->message('Correo de notificación: '.$tipo.' ** '.$message);
         if (!$this->email->send()) {
             print_r( $this->email->print_debugger() );
         }
         return $type;
-        // SMTP config
-        // $config['smtp_host'] = 'mail.google.com';
-        // $config['smtp_port'] = 587;
-        // $config['smtp_user'] = 'info@fidelsilva.com';
-        // $config['smtp_pass'] = '';
-        // $config['protocol'] = 'smtp';
-
     }
     // get all questions
     public function getQuestions($seeAll = false)
@@ -184,6 +177,36 @@ class GeneralModel extends CI_Model {
             }
         }
         return $questions;
+    }
+    // get question on array format for csv handle
+    public function getQuestionsCsv($now)
+    {
+        // create csv
+        $this->db->select('full_name, id_number, email, headq, question, question_date, response, source, response_date');
+        $result = $this->db->get('questions')->result_array();
+        $reportName = 'questionsReport-'.$now->format('Y-m-d').'.csv';
+        $handle = fopen($this->config->item('reportsFolder').$reportName, 'w');
+        fputcsv($handle, array(
+            'Nombre',
+            'Identificación',
+            'Email',
+            'Sede',
+            'Pregunta',
+            'Fecha',
+            'Respuesta',
+            'Fuente',
+            'Fecha respuesta'
+        ));
+        foreach ($result as $row) {
+            fputcsv($handle, $row);
+        }
+        fclose($handle);
+        // db register
+        $arrIns = array(
+            'file_name' => $reportName
+        );
+        $this->db->insert('reports', $arrIns);
+        return $reportName;
     }
     // get all questions from backend
     public function getQuestionsFromAdmin()
@@ -472,6 +495,12 @@ class GeneralModel extends CI_Model {
         $this->db->where('id', $postData['id']);
         $this->db->update('slide', $arrIns);
         return $this->getLastItem('slide');  
+    }
+    // get slides
+    public function getSlides()
+    {
+        $this->db->where('section', 'home');
+        return $this->db->get('slide')->result();
     }
 }
 

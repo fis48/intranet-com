@@ -280,7 +280,11 @@ input, label {
     width: 25%;
 }
 
-
+.cont-slide {
+    padding: 45px;
+    height: 250px;
+    overflow-y: hidden;
+}
 
 
 

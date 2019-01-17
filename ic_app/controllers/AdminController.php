@@ -163,6 +163,22 @@ class AdminController extends CI_Controller {
         $setp = $this->GeneralModel->setPublic($this->input->post());
         echo json_encode($setp);
     }
+    // export questions to excel
+    public function questionsCsv()
+    {
+        $now = new Datetime();
+        $filename = $this->GeneralModel->getQuestionsCsv($now);
+        $this->session->set_flashdata('Se ha generado un nuevo reporte de preguntas.');
+        redirect('/admin/questionsreports', 'refresh');
+    }
+    // questions reports
+    public function questionsReports()
+    {
+        $data['logged'] = $this->session->userdata('admin');
+        $data['reports']    = $this->GeneralModel->getSimpleItems('reports');
+        $data['mainContent']    = 'back/questions-reports';
+        $this->load->view('general/back-template', $data);
+    }
     // ajax set team order
     public function setTeamOrder()
     {

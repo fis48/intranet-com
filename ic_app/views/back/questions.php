@@ -5,6 +5,10 @@
         <i class="fa fa-question-circle fa-sm"></i>
         Preguntas
     </h1>
+    <a href="<?php echo '/admin/questionscsv' ?>" class="btn-sm btn btn-danger">
+        <i class="fa fa-file-excel"></i>
+        Exportar excel
+    </a>
     <div class="unresolved col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h3 class="q-h3 alert-danger">
             <i class="fa fa-exclamation-triangle fa-sm"></i>

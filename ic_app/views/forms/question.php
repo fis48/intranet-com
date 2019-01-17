@@ -30,9 +30,19 @@
             <label for="headq">Sede</label>
             <select name="headq" class="form-control" required>
                 <option value="" disabled selected="">Seleccione una</option>
-                <option value="sede">sede</option>
-                <option value="sede">sede</option>
-                <option value="sede">sede</option>
+                <option value="Barranquilla – Miss Universo">Barranquilla – Miss Universo</option>
+                <option value=" Barranquilla – Green Towers"> Barranquilla – Green Towers</option>
+                <option value="Bogotá – Torre Alianza">Bogotá – Torre Alianza</option>
+                <option value="Bogotá – Morato">Bogotá – Morato</option>
+                <option value="Bogotá – Carrera 12">Bogotá – Carrera 12</option>
+                <option value="Bogotá – Calle 80 / Bodega 23">Bogotá – Calle 80 / Bodega 23</option>
+                <option value="Bucaramanga">Bucaramanga</option>
+                <option value="Cali">Cali</option>
+                <option value="Cartagena">Cartagena</option>
+                <option value="Manizales – Siglo XXI">Manizales – Siglo XXI</option>
+                <option value="Manizales - Castillo">Manizales - Castillo</option>
+                <option value="Medellín">Medellín</option>
+                <option value="Pereira">Pereira</option>
             </select>
         </div>
         <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
