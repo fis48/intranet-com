@@ -318,11 +318,15 @@ class GeneralModel extends CI_Model {
     {
         // register
         $arrIns['title']    = $postData['title'];
+        $arrIns['date'] = $postData['date'];
         $arrIns['description']  = $postData['description'];
-        $arrIns['image']    = '/news/'.$this->session->userdata("temp_bull_img");
+        if ($this->session->userdata("temp_bull_img") !== NULL) {
+            $arrIns['image']    = '/news/'.$this->session->userdata("temp_bull_img");
+        }
         $arrIns['body'] = $postData['body'];
         $this->db->where('id', $postData['id']);
         $this->db->update('news', $arrIns);
+        $this->session->unset_userdata("temp_bull_img");
         return $this->getLastItem('news');
     }
     // add events
