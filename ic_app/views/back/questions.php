@@ -6,8 +6,12 @@
         Preguntas
     </h1>
     <a href="<?php echo '/admin/questionscsv' ?>" class="btn-sm btn btn-danger">
-        <i class="fa fa-file-excel"></i>
+        <i class="fa fa-file"></i>
         Exportar excel
+    </a>
+    <a href="<?php echo '/admin/questionsreports' ?>" class="btn-sm btn btn-default">
+        <i class="fa fa-file"></i>
+        Ver reportes
     </a>
     <div class="unresolved col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h3 class="q-h3 alert-danger">

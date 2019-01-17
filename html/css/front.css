@@ -139,7 +139,11 @@ a:hover {
     top: 0;
     width: 86%;
     margin-left: 7%;
-    margin-top: 95px;
+    margin-top: 120px;
+}
+
+.cont-banner-home video {
+    margin-top: -60px;
 }
 
 #main-banner {
