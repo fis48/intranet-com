@@ -142,6 +142,16 @@
 		margin-right: 5px;
 	}
 
+	.team-display, 
+	.glossary-display {
+		position: absolute;
+		height: auto;
+	}
+
+	.glossary-display p {
+		color: #FFF;
+	}
+
 } /* end of 576px */
 
 

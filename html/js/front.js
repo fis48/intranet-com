@@ -20,6 +20,7 @@ $(document).ready(function(){
     });
     // glossary see more
     $(".glossary-card a").on("click", function(e){
+        var glossaryId = $(this).attr('data-word-id');
         e.preventDefault();
         $.post(
             '/front/getGlossaryWord',
@@ -29,7 +30,7 @@ $(document).ready(function(){
             function(res)
             {
                 var word = JSON.parse(res);
-                $(".glossary-display").fadeIn();
+                $(".glossary-display[data-word-id='"+glossaryId+"']").fadeIn();
                 $(".glossary-display h2").text(word.word);
                 $(".glossary-display p").text(word.meaning);
                 // close
@@ -40,8 +41,9 @@ $(document).ready(function(){
             }
         );
     });
-    // who see more
+    // who team display
     $(".who-card a").on("click", function(e){
+        var teamId = $(this).attr("data-team-id");
         e.preventDefault();
         $.post(
             '/front/getTeamItem',
@@ -51,7 +53,7 @@ $(document).ready(function(){
             function(res)
             {
                 var team = JSON.parse(res);
-                $(".team-display").fadeIn();
+                $(".team-display[data-team-id='"+teamId+"']").fadeIn();
                 $(".team-display img").attr('src', 'team/'+team.image);
                 $(".team-display h2").text(team.name+' '+team.last_name);
                 $(".team-display p").text(team.description);

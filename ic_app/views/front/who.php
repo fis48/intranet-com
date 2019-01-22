@@ -31,18 +31,19 @@
             <img src="<?php echo '/team/'.$teamItem->image ?>" class="img-circle">
             <h3><?php echo $teamItem->name ?><br> <?php echo $teamItem->last_name ?></h3>
             <p><?php echo substr($teamItem->description, 0, 200)."..." ?></p>
+            <!-- team display -->
+            <div class="team-display" data-team-id="<?php echo $teamItem->id ?>">
+                <img src="" alt="CMC Analitycs">
+                <div class="clear-25"></div>
+                <h2></h2>
+                <p></p>
+                <a href="#" class="close-btn btn btn-secondary">
+                    Cerrar
+                </a>
+            </div>
             <a data-team-id="<?php echo $teamItem->id ?>">Ver más</a>
         </div>
     <?php endforeach ?>
-    <div class="team-display">
-        <img src="" alt="CMC Analitycs">
-        <div class="clear-25"></div>
-        <h2></h2>
-        <p></p>
-        <a href="#" class="close-btn btn btn-secondary">
-            Cerrar
-        </a>
-    </div>
 </section>
 
 
