@@ -92,8 +92,29 @@
 
 @media screen and (max-width: 576px) {
 
+	.carousel {
+		display: none;
+	}
+
+	.cont-banner-home {
+		position: relative;
+	}
+
 	#main-banner {
-		height: 580px;
+		height: auto;
+	}
+
+	section {
+		padding: 25px;
+	}
+
+	.new-card {
+		margin-bottom: 30px;
+	}
+
+	.video {
+		margin-top: 65px;
+		margin-bottom: 25px;
 	}
 
 } /* end of 576px */

@@ -32,7 +32,7 @@
 <section id="news">
     <?php foreach ($news as $new): ?>
         <?php $nDate = new Datetime($new->date); ?>
-        <div class="new-card col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
+        <div class="new-card col-lg-6 col-md-6 col-sm-12 col-xs-12 float-left">
             <h2><?php echo $new->title ?></h2>
             <img src="<?php echo $new->image ?>" class="img-fluid"
                 alt="Acumen" />
