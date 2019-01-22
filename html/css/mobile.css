@@ -146,6 +146,7 @@
 	.glossary-display {
 		position: absolute;
 		height: auto;
+		padding: 15px;
 	}
 
 	.glossary-display p {
