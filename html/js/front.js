@@ -63,6 +63,21 @@ $(document).ready(function(){
             }
         );
     });
+
+    // mobile
+    $(".menu-btn").on("click", function(){
+        $(".main-nav.mobile").toggle();
+    });
+    $("li.cont-submenu").on("click", function(){
+        
+
+        // console.log( $(".submenu", $(this)).css('display') );
+
+        $(".submenu", $(this)).toggle();
+        // $(".submenu", $(this)).css("display")
+
+
+    });
 });
 
 

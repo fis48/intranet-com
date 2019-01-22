@@ -57,7 +57,7 @@
                 </option>
             </select>
         </div>
-        <div class="subtype form-group alert-success col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="subtype form-group alert-success col-lg-4 col-md-12 col-sm-12 col-xs-12">
             <!-- subtype -->
             <label for="subtype" class="subtype-sel">Su idea aplica para</label>
             <select name="subtype" class="subtype-sel form-control">

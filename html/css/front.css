@@ -46,6 +46,10 @@ a:hover {
     text-decoration: none;
 }
 
+.mobile {
+    display: none;
+}
+
 .flashdata {
     padding: 25px;
     background: #000;
@@ -135,11 +139,11 @@ a:hover {
 .main-nav li ul a:hover {
     color: #3FD2AB;
 }
-
+/*
 .cont-submenu:hover .submenu {
     display: block;
 }
-
+*/
 .cont-banner-home {
     position: absolute;
     top: 0;

@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="/css/front.css">
+        <link rel="stylesheet" type="text/css" href="/css/mobile.css">
         <!-- js -->
         <script src="/js/jquery.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>

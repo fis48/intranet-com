@@ -27,7 +27,7 @@
 <!-- team -->
 <section id="who">
     <?php foreach ($team as $teamItem): ?>
-        <div class="who-card col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="who-card col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <img src="<?php echo '/team/'.$teamItem->image ?>" class="img-circle">
             <h3><?php echo $teamItem->name ?><br> <?php echo $teamItem->last_name ?></h3>
             <p><?php echo substr($teamItem->description, 0, 200)."..." ?></p>

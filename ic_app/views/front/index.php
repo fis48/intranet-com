@@ -7,7 +7,7 @@
         <!-- text -->
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
             <h1>Programa de transformación</h1>
-            <div class="clear-25"></div>
+            <div class="clear-25 top-clear"></div>
             <ul>
                 <li><strong>DO</strong>blar el negocio</li>
                 <li><strong>RE</strong>vitalizar la experiencia del cliente</li>
@@ -18,7 +18,7 @@
             </ul>
         </div>
         <!-- video -->
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
+        <div class="video col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
             <video width="100%" height="100%" controls>
                 <source src="movie.mp4" type="video/mp4">
                 <source src="movie.ogg" type="video/ogg">
@@ -79,7 +79,7 @@
 <section id="interact">
     <h2 class="section-title">Interactuemos</h2>
     <!-- questions -->
-    <div class="icon-card col-lg-3 col-md-3 col-sm-4 col-xs-12">
+    <div class="icon-card col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <a href="/preguntas">
             <img class="img-fluid" src="/assets/questions-icon.png" />
             <h3>Preguntas</h3>
@@ -89,7 +89,7 @@
         </a>
     </div>
     <!-- worry -->
-    <div class="icon-card col-lg-3 col-md-3 col-sm-4 col-xs-12">
+    <div class="icon-card col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <a href="/me-preocupa">
             <img class="img-fluid" src="/assets/worry-icon.png" />
             <h3>Me preocupa que</h3>
@@ -99,7 +99,7 @@
         </a>
     </div>
     <!-- like -->
-    <div class="icon-card col-lg-3 col-md-3 col-sm-4 col-xs-12">
+    <div class="icon-card col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <a href="/me-gusta">
             <img class="img-fluid" src="/assets/like-icon.png" />
             <h3>Me gusta que</h3>
@@ -109,7 +109,7 @@
         </a>
     </div>
     <!-- occur -->
-    <div class="icon-card col-lg-3 col-md-3 col-sm-4 col-xs-12">
+    <div class="icon-card col-lg-3 col-md-3 col-sm-6 col-xs-12">
         <a href="/se-me-ocurre">
             <img class="img-fluid" src="/assets/idea-icon.png" />
             <h3>Se me ocurre que</h3>
