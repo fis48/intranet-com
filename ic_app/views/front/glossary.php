@@ -4,17 +4,17 @@
         <img class="img-fluid" src="<?php echo '/home_slide/'.$mainImg ?>">
     <?php endif ?>
     <!-- text -->
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
-        <div class="clear-25"></div>
-        <div class="clear-25"></div>
-        <div class="clear-25"></div>
-        <div class="clear-25"></div>
-        <div class="clear-25"></div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-left">
+        <div class="clear-25 top-clear"></div>
+        <div class="clear-25 top-clear"></div>
+        <div class="clear-25 top-clear"></div>
+        <div class="clear-25 top-clear"></div>
+        <div class="clear-25 top-clear"></div>
         <h1>Glosario</h1>
-        <div class="clear-25"></div>
-        <div class="clear-25"></div>
-        <div class="clear-25"></div>
-        <div class="clear-25"></div>
+        <div class="clear-25 top-clear"></div>
+        <div class="clear-25 top-clear"></div>
+        <div class="clear-25 top-clear"></div>
+        <div class="clear-25 top-clear"></div>
     </div>
 </section>
 <!-- banner foot -->

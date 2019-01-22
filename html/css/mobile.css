@@ -102,6 +102,7 @@
 
 	#main-banner {
 		height: auto;
+		padding: 15px;
 	}
 
 	section {
@@ -115,6 +116,30 @@
 	.video {
 		margin-top: 65px;
 		margin-bottom: 25px;
+	}
+
+	#main-banner img {
+		display: none;
+	}
+
+	#main-banner h1 {
+		padding: 15px 0;
+	}
+
+	.wrap-comments {
+		padding: 15px;
+	}
+
+	.subtype {
+		width: 95%;
+	}
+
+	.bull-head h2, .cont-event h2 {
+		margin-top: 15px;
+	}
+
+	.bull-head i {
+		margin-right: 5px;
 	}
 
 } /* end of 576px */

@@ -5,21 +5,21 @@
     <?php endif ?>
     <!-- text -->
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
-        <div class="clear-25"></div>
-        <div class="clear-25"></div>
-        <div class="clear-25"></div>
-        <div class="clear-25"></div>
-        <div class="clear-25"></div>
+        <div class="clear-25 top-clear"></div>
+        <div class="clear-25 top-clear"></div>
+        <div class="clear-25 top-clear"></div>
+        <div class="clear-25 top-clear"></div>
+        <div class="clear-25 top-clear"></div>
         <h1>Comentarios</h1>
-        <div class="clear-25"></div>
-        <div class="clear-25"></div>
-        <div class="clear-25"></div>
-        <div class="clear-25"></div>
+        <div class="clear-25 top-clear"></div>
+        <div class="clear-25 top-clear"></div>
+        <div class="clear-25 top-clear"></div>
+        <div class="clear-25 top-clear"></div>
     </div>
 </section>
 
-<div class="clear-25"></div>
-<div class="clear-25"></div>
+<div class="clear-25 top-clear"></div>
+<div class="clear-25 top-clear"></div>
 
 <!-- comments form -->
 <?php $this->load->view('forms/comments'); ?>
