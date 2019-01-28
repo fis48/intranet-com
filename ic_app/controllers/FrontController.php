@@ -92,6 +92,7 @@ class FrontController extends CI_Controller {
         $data['now']    = new Datetime();
         $rawComments = $this->GeneralModel->getComments();
         $selValue = NULL;
+        $title = "Comentarios";
         switch ($this->uri->segment(1)) {
             case 'me-preocupa':
                 $comments = $rawComments->worry;
