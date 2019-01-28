@@ -185,6 +185,7 @@ a:hover {
 */
 
 #foot-banner p {
+    position: relative;
     color: #FFF;
     background: #003056;
     padding: 35px 25px;
@@ -192,6 +193,17 @@ a:hover {
     width: 100%;
     text-align: center;
 }
+
+#foot-banner a {
+    position: relative;
+    bottom: -50px;
+    background-color: #42A0DB;
+    color: #FFF;
+    width: 200px;
+    padding: 5px 0;
+    margin: 0 auto;
+}
+
 
 .section-title {
     text-align: center;
@@ -415,7 +427,6 @@ span.info {
 .carousel-inner {
     height: 348px;
 }
-
 
 
 

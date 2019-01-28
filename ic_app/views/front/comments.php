@@ -10,7 +10,7 @@
         <div class="clear-25 top-clear"></div>
         <div class="clear-25 top-clear"></div>
         <div class="clear-25 top-clear"></div>
-        <h1>Comentarios</h1>
+        <h1><?php echo $title ?></h1>
         <div class="clear-25 top-clear"></div>
         <div class="clear-25 top-clear"></div>
         <div class="clear-25 top-clear"></div>

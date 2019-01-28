@@ -6,7 +6,6 @@
     <div class="cont-banner-home">
         <!-- text -->
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-left">
-            <h1>Programa de transformación</h1>
             <div class="clear-25 top-clear"></div>
             <ul>
                 <li><strong>DO</strong>blar el negocio</li>
@@ -20,8 +19,7 @@
         <!-- video -->
         <div class="video col-lg-6 col-md-6 col-sm-12 col-xs-12 float-left">
             <video width="100%" height="100%" controls>
-                <source src="movie.mp4" type="video/mp4">
-                <source src="movie.ogg" type="video/ogg">
+                <source src="/video/Video Alianza-2018.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -32,6 +30,7 @@
 <section id="foot-banner" class=" no-padd">
     <p>
     En este sitio podrás encontrar información relacionada con los proyectos que hacen parte del programa de transformación, sus principales representantes, ultimas noticias y eventos, y adicionalmente encontrarás un espacio para que puedas hacernos tus preguntas y comentarios al respecto del desarrollo de los proyectos.
+        <a href="https://alianzalearning.ennlace.com/login/index.php">ACTIVIDADES</a>
     </p>
 </section>
 

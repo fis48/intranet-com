@@ -96,20 +96,24 @@ class FrontController extends CI_Controller {
             case 'me-preocupa':
                 $comments = $rawComments->worry;
                 $selValue = 'worry';
+                $title = "Me preocupa que";
             break;
             case 'me-gusta':
                 $comments = $rawComments->like;
                 $selValue = 'like';
+                $title = "Me gusta que";
             break;
             case 'se-me-ocurre':
                 $comments = $rawComments->occur;
                 $selValue = 'occur';
+                $title = "Se me ocurre que";
             break;
             default:
                 $comments = $rawComments;
         }
         $data['mainImg']    = $this->GeneralModel->getSectionImg('news');
         $data['comments']   = $comments;
+        $data['title']  = $title;
         $data['selValue']   = $selValue;
         $data['mainContent']    = 'front/comments';
         $this->load->view('general/front-template', $data);
