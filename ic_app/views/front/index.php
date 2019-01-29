@@ -4,20 +4,8 @@
         <?php $this->load->view('front/slide') ?>
     <?php endif ?>
     <div class="cont-banner-home">
-        <!-- text -->
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-left">
-            <div class="clear-25 top-clear"></div>
-            <ul>
-                <li><strong>DO</strong>blar el negocio</li>
-                <li><strong>RE</strong>vitalizar la experiencia del cliente</li>
-                <li><strong>MI</strong>nimizar ineficiencias y Riesgos</li>
-                <li><strong>FA</strong>vorecer el Medio Ambiente</li>
-                <li><strong>SOL</strong>o será posible potenciando nuestro talento</li>
-                <li><strong>ALIANZA</strong> Crece en armonía</li>
-            </ul>
-        </div>
         <!-- video -->
-        <div class="video col-lg-6 col-md-6 col-sm-12 col-xs-12 float-left">
+        <div class="video col-lg-6 col-md-6 col-sm-12 col-xs-12 float-right">
             <video width="100%" height="100%" controls>
                 <source src="/video/Video Alianza-2018.mp4" type="video/mp4">
                 Your browser does not support the video tag.

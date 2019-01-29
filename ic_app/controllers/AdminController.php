@@ -398,7 +398,7 @@ class AdminController extends CI_Controller {
         }
         $data['logged'] = $this->session->userdata('admin');
         $data['now']    = new Datetime();
-        $data['projects'] = $this->GeneralModel->getSimpleItems('projects');
+        $data['projects'] = $this->GeneralModel->getSimpleItems('projects', 'date', 'asc');
         $data['mainContent']    = 'back/projects';
         $this->load->view('general/back-template', $data);
     }

@@ -19,7 +19,7 @@ class GeneralModel extends CI_Model {
     }
     // items list
     public function getSimpleItems($tableName, $orderField = "id", $dir = "desc")
-    {   
+    {
         $this->db->order_by($orderField, $dir);
         return $this->db->get($tableName)->result();
     }
@@ -377,6 +377,7 @@ class GeneralModel extends CI_Model {
         // register new
         $arrIns = array(
             'title' => $postData['title'],
+            'date'  => $postData['date'],
             'description'  => $postData['description'],
             'image'     => $filesData['image']['name']
         );
@@ -394,6 +395,7 @@ class GeneralModel extends CI_Model {
         }
         // register
         $arrIns['title']    = $postData['title'];
+        $arrIns['date'] = $postData['date'];
         $arrIns['description']  = $postData['description'];
         $this->db->where('id', $postData['id']);
         $this->db->update('projects', $arrIns);
@@ -460,7 +462,7 @@ class GeneralModel extends CI_Model {
         $arrIns['description']  = $postData['description'];
         $this->db->where('id', $postData['id']);
         $this->db->update('team', $arrIns);
-        return $this->getLastItem('team');  
+        return $this->getLastItem('team');
     }
 
     // add slide
@@ -498,7 +500,7 @@ class GeneralModel extends CI_Model {
         $arrIns['section']  = $postData['section'];
         $this->db->where('id', $postData['id']);
         $this->db->update('slide', $arrIns);
-        return $this->getLastItem('slide');  
+        return $this->getLastItem('slide');
     }
     // get slides
     public function getSlides()

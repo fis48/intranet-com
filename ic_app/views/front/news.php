@@ -1,7 +1,7 @@
 <!-- banner -->
 <section id="main-banner" class="container-fuid news">
     <?php if (isset($mainImg)): ?>
-        <img class="img-fluid" src="<?php echo '/home_slide/'.$mainImg ?>">        
+        <img class="img-fluid" src="<?php echo '/home_slide/'.$mainImg ?>">
     <?php endif ?>
     <!-- text -->
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 float-left">
@@ -35,7 +35,7 @@
         <div class="new-card col-lg-6 col-md-6 col-sm-12 col-xs-12 float-left">
             <h2><?php echo $new->title ?></h2>
             <img src="<?php echo $new->image ?>" class="img-fluid"
-                alt="Acumen" />
+                alt="CMC" />
             <p class=" float-left">
                 <span class="info float-left"><?php echo $new->title ?></span>
                 <span class="info float-right">
@@ -43,7 +43,7 @@
                 </span>
             </p>
             <p class=" float-left">
-                <?php echo substr($new->description, 0, 220).'...' ?>            
+                <?php echo substr($new->description, 0, 220).'...' ?>
             </p>
             <a class="btn btn-sm more-btn" href="<?php echo '/boletin/'.$new->id ?>">
                 Ver más

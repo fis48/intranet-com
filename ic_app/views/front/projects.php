@@ -32,11 +32,15 @@ Entérate en qué consisten nuestros proyectos que hacen parte del gran programa
 <!-- events -->
 <section id="projects">
     <?php foreach ($projects as $project): ?>
+        <?php $pDate = new Datetime($project->date); ?>
         <div class="new-card col-lg-6 col-md-6 col-sm-12 col-xs-12 float-left">
             <img src="<?php echo '/projects/'.$project->image ?>" class="img-fluid"
                 alt="CMC Analytics" />
             <p class=" float-left">
                 <span class="info float-left"><?php echo $project->title ?></span>
+                <span class="info float-right">
+                    <?php echo strftime('%d/%m/%Y', $pDate->getTimestamp()); ?>
+                </span>
             </p>
             <p class=" float-left">
                 <?php echo substr($project->description, 0, 220).'...' ?>

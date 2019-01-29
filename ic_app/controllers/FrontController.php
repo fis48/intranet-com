@@ -168,7 +168,7 @@ class FrontController extends CI_Controller {
     public function projects()
     {
         $data['mainImg']    = $this->GeneralModel->getSectionImg('projects');
-        $data['projects']   = $this->GeneralModel->getSimpleItems('projects');
+        $data['projects']   = $this->GeneralModel->getSimpleItems('projects', 'date', 'asc');
         $data['mainContent']    = 'front/projects';
         $this->load->view('general/front-template', $data);
     }
