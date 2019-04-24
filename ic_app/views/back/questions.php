@@ -5,11 +5,11 @@
         <i class="fa fa-question-circle fa-sm"></i>
         Preguntas
     </h1>
-    <a href="<?php echo '/admin/questionscsv' ?>" class="btn-sm btn btn-danger">
+    <a href="<?php echo '/index.php/admin/questionscsv' ?>" class="btn-sm btn btn-danger">
         <i class="fa fa-file"></i>
         Exportar excel
     </a>
-    <a href="<?php echo '/admin/questionsreports' ?>" class="btn-sm btn btn-default">
+    <a href="<?php echo '/index.php/admin/questionsreports' ?>" class="btn-sm btn btn-default">
         <i class="fa fa-file"></i>
         Ver reportes
     </a>
@@ -46,7 +46,7 @@
                     <?php $qDate = new Datetime($uQuest->question_date); ?>
                     <td><?php echo strftime('%d de %b', $qDate->getTimestamp()) ?></td>
                     <td>
-                        <a href="<?php echo '/admin/questionresponse/'.$uQuest->id ?>"
+                        <a href="<?php echo '/index.php/admin/questionresponse/'.$uQuest->id ?>"
                             class="resp-btn btn btn-primary btn-sm float-right">
                             <i class="fa fa-exchange-alt"></i>
                             Responder
@@ -117,7 +117,7 @@
                 </td>
                 <td><?php echo $rQuestion->source ?></td>
                 <td>
-                    <a href="<?php echo '/admin/questionupdate/'.$rQuestion->id ?>"
+                    <a href="<?php echo '/index.php/admin/questionupdate/'.$rQuestion->id ?>"
                         class="resp-btn edit-q btn btn-primary btn-sm float-right">
                         <i class="fa fa-marker"></i>
                         Actualizar pregunta

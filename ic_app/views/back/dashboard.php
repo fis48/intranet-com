@@ -8,8 +8,8 @@
                 <?php echo count($glossary) ?>
             </span>
         </h2>
-        <a href="/admin/addword" class="btn btn-sm">Agregar palabra</a>
-        <a href="/admin/glossary" class="btn btn-sm">Ver todo</a>
+        <a href="/index.php/admin/addword" class="btn btn-sm">Agregar palabra</a>
+        <a href="/index.php/admin/glossary" class="btn btn-sm">Ver todo</a>
         <h3>
             <i class="fa fa-clock fa-sm"></i>
             Agregadas recientemente
@@ -32,8 +32,8 @@
                 <?php echo count($questions->unresolved); ?>
             </span>
         </h2>
-        <a href="/admin/questions" class="btn btn-sm">Ver todo</a>
-        <a href="/admin/createquestion" class="btn btn-sm">Crear pregunta</a>
+        <a href="/index.php/admin/questions" class="btn btn-sm">Ver todo</a>
+        <a href="/index.php/admin/createquestion" class="btn btn-sm">Crear pregunta</a>
         <h3>
             <i class="fa fa-sm fa-exclamation-triangle"></i>
             Sin respuesta
@@ -63,7 +63,7 @@
                 <?php echo $commentsCount; ?>
             </span>
         </h2>
-        <a href="/admin/comments" class="btn btn-sm">Ver todo</a>
+        <a href="/index.php/admin/comments" class="btn btn-sm">Ver todo</a>
         <h3>
             <i class="fa fa-sm fa-clock"></i>
             Agregados recientemente
@@ -99,8 +99,8 @@
             Boletines
             <span class="badge badge-pill badge-secondary"><?php echo count($news) ?></span>
         </h2>
-        <a href="/admin/addnews" class="btn btn-sm">Agregar boletín</a>
-        <a href="/admin/news" class="btn btn-sm">Ver todo</a>
+        <a href="/index.php/admin/addnews" class="btn btn-sm">Agregar boletín</a>
+        <a href="/index.php/admin/news" class="btn btn-sm">Ver todo</a>
         <h3 class="q-h3 alert-primary">
             <i class="fa fa-marker fa-sm"></i>
             Última actualización
@@ -128,8 +128,8 @@
             Eventos
             <span class="badge badge-pill badge-secondary"><?php echo count($events) ?></span>
         </h2>
-        <a href="/admin/addevent" class="btn btn-sm">Agregar eventos</a>
-        <a href="/admin/events" class="btn btn-sm">Ver todo</a>
+        <a href="/index.php/admin/addevent" class="btn btn-sm">Agregar eventos</a>
+        <a href="/index.php/admin/events" class="btn btn-sm">Ver todo</a>
         <h3 class="q-h3 alert-primary">
             <i class="fa fa-marker fa-sm"></i>
             Última actualización
@@ -163,12 +163,12 @@
 <div class="container-fluid back-section">
     <div class="float-left col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <h2>
-            <i class="fa fa-check fa-sm"></i> 
+            <i class="fa fa-check fa-sm"></i>
             Proyectos
             <span class="badge badge-pill badge-secondary"><?php echo count($projects) ?></span>
         </h2>
-        <a href="/admin/addproject" class="btn btn-sm">Agregar proyectos</a>
-        <a href="/admin/projects" class="btn btn-sm">Ver todo</a>
+        <a href="/index.php/admin/addproject" class="btn btn-sm">Agregar proyectos</a>
+        <a href="/index.php/admin/projects" class="btn btn-sm">Ver todo</a>
         <ul>
             <li>
                 <?php if (isset($projects[0])): ?>
@@ -190,8 +190,8 @@
             ¿Quién es Quién?
             <span class="badge badge-pill badge-secondary"><?php echo count($team) ?></span>
         </h2>
-        <a href="/admin/addteam" class="btn btn-sm">Agregar persona</a>
-        <a href="/admin/team" class="btn btn-sm">Ver todo</a>
+        <a href="/index.php/admin/addteam" class="btn btn-sm">Agregar persona</a>
+        <a href="/index.php/admin/team" class="btn btn-sm">Ver todo</a>
     </div>
     <!-- slide home -->
     <div class="back-card float-left col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -200,8 +200,8 @@
             Banners secciones
             <span class="badge badge-pill badge-secondary"><?php //echo count($slide) ?></span>
         </h2>
-        <a href="/admin/addslide" class="btn btn-sm">Agregar imagen</a>
-        <a href="/admin/slide" class="btn btn-sm">Ver todo</a>
+        <a href="/index.php/admin/addslide" class="btn btn-sm">Agregar imagen</a>
+        <a href="/index.php/admin/slide" class="btn btn-sm">Ver todo</a>
     </div>
 </div>
 

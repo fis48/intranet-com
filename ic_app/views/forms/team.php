@@ -16,9 +16,9 @@
     <h3>
     </h3>
     <?php if (!isset($team)): ?>
-        <?php echo form_open_multipart('/admin/addteam') ?>
+        <?php echo form_open_multipart('/index.php/admin/addteam') ?>
     <?php else: ?>
-        <?php echo form_open_multipart('/admin/updateteam/'.$team->id) ?>
+        <?php echo form_open_multipart('/index.php/admin/updateteam/'.$team->id) ?>
             <input type="hidden" name="id" value="<?php echo $team->id ?>">
     <?php endif ?>
         <div class="form-group">

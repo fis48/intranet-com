@@ -45,7 +45,7 @@
             <p class=" float-left">
                 <?php echo substr($new->description, 0, 220).'...' ?>
             </p>
-            <a class="btn btn-sm more-btn" href="<?php echo '/boletin/'.$new->id ?>">
+            <a class="btn btn-sm more-btn" href="<?php echo '/index.php/boletin/'.$new->id ?>">
                 Ver más
             </a>
         </div>

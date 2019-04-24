@@ -1,8 +1,8 @@
 $(document).ready(function(){
-    
+
     // bulletin redactor
     $R('#bull-body', {
-        imageUpload: '/admin/addnews',
+        imageUpload: '/index.php/admin/addnews',
         callbacks: {
             image: {
                 uploaded: function(image, response){
@@ -16,7 +16,7 @@ $(document).ready(function(){
     // make public
     $("input[name='is_public']").on('click', function(){
         $.post(
-            '/admin/setpublic',
+            '/index.php/admin/setpublic',
             {
                 qId: $(this).attr('data-id'),
                 public: $(this).prop('checked')
@@ -41,7 +41,7 @@ $(document).ready(function(){
     // team order
     $("input[name='order']").on("change", function(){
         $.post(
-            '/admin/setTeamOrder',
+            '/index.php/admin/setTeamOrder',
             {
                 teamId: $(this).attr("data-team-id"),
                 order: $(this).val()

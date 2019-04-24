@@ -11,17 +11,17 @@
         <li class="cont-submenu">
             <a class="float-right" href="#">Últimas noticias</a>
             <ul class="submenu">
-                <li><a href="/boletines">Boletines</a></li>
-                <li><a href="/eventos">Eventos</a></li>
+                <li><a href="/index.php/boletines">Boletines</a></li>
+                <li><a href="/index.php/eventos">Eventos</a></li>
             </ul>
         </li>
-        <li><a class="float-right" href="/interactuemos">Interactuemos</a></li>
+        <li><a class="float-right" href="/index.php/interactuemos">Interactuemos</a></li>
         <li class="cont-submenu">
             <a class="float-right" href="#">Programa de transformación</a>
             <ul class="submenu">
-                <li><a href="/proyectos">Los proyectos</a></li>
-                <li><a href="/quien-es-quien">Quién es quién</a></li>
-                <li><a href="/glosario">Glosario</a></li>
+                <li><a href="/index.php/proyectos">Los proyectos</a></li>
+                <li><a href="/index.php/quien-es-quien">Quién es quién</a></li>
+                <li><a href="/index.php/glosario">Glosario</a></li>
             </ul>
         </li>
     </ul>
@@ -41,17 +41,17 @@
         <li class="cont-submenu">
             <a class="float-right" href="#">Últimas noticias</a>
             <ul class="submenu">
-                <li><a href="/boletines">Boletines</a></li>
-                <li><a href="/eventos">Eventos</a></li>
+                <li><a href="/index.php/boletines">Boletines</a></li>
+                <li><a href="/index.php/eventos">Eventos</a></li>
             </ul>
         </li>
-        <li><a class="float-right" href="/interactuemos">Interactuemos</a></li>
+        <li><a class="float-right" href="/index.php/interactuemos">Interactuemos</a></li>
         <li class="cont-submenu">
             <a class="float-right" href="#">Programa de transformación</a>
             <ul class="submenu">
-                <li><a href="/proyectos">Los proyectos</a></li>
-                <li><a href="/quien-es-quien">Quién es quién</a></li>
-                <li><a href="/glosario">Glosario</a></li>
+                <li><a href="/index.php/proyectos">Los proyectos</a></li>
+                <li><a href="/index.php/quien-es-quien">Quién es quién</a></li>
+                <li><a href="/index.php/glosario">Glosario</a></li>
             </ul>
         </li>
     </ul>

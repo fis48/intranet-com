@@ -16,7 +16,7 @@
         <br>
     </p>
     <!-- form -->
-    <?php echo form_open('/admin/questionupdate/'.$question->id) ?>
+    <?php echo form_open('/index.php/admin/questionupdate/'.$question->id) ?>
         <div class="form-group">
             <!-- question -->
             <label for="question">Pregunta</label>

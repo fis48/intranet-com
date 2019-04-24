@@ -46,7 +46,7 @@ $(document).ready(function(){
         var teamId = $(this).attr("data-team-id");
         e.preventDefault();
         $.post(
-            '/front/getTeamItem',
+            '/index.php/front/getTeamItem',
             {
                 teamId: $(this).attr("data-team-id")
             },
@@ -71,14 +71,7 @@ $(document).ready(function(){
         $(".main-nav.mobile").toggle();
     });
     $("li.cont-submenu").on("click", function(){
-        
-
-        // console.log( $(".submenu", $(this)).css('display') );
-
         $(".submenu", $(this)).toggle();
-        // $(".submenu", $(this)).css("display")
-
-
     });
 });
 

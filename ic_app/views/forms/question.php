@@ -9,7 +9,7 @@
         <div class="clear-25"></div>
 
     <?php endif ?>
-    <?php echo form_open('/front/askquestion') ?>
+    <?php echo form_open('/index.php/front/askquestion') ?>
         <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-12">
             <!-- full name -->
             <label for="full_name">Nombres y Apellidos</label>
@@ -54,7 +54,7 @@
                 value="<?php echo $now->format('Y-m-d H:i:s') ?>">
             <!-- is admin -->
             <?php if ($this->uri->segment(1) == 'admin'): ?>
-                <input name="is_admin" type="hidden" value="1">                
+                <input name="is_admin" type="hidden" value="1">
             <?php endif ?>
             <div class="clear-10"></div>
             <!-- submit -->

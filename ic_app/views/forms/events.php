@@ -4,13 +4,13 @@
         <?php if (isset($event)): ?>
            Actualizar eventos
         <?php else: ?>
-            Agregar eventos            
+            Agregar eventos
         <?php endif ?>
     </h1>
     <?php if (isset($event)): ?>
-        <?php echo form_open_multipart('/admin/updateevents/'.$this->uri->segment(3)) ?>
+        <?php echo form_open_multipart('/index.php/admin/updateevents/'.$this->uri->segment(3)) ?>
     <?php else: ?>
-        <?php echo form_open_multipart('/admin/addevent') ?>
+        <?php echo form_open_multipart('/index.php/admin/addevent') ?>
     <?php endif ?>
         <!-- title -->
         <div class="form-group no-padd col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -27,7 +27,7 @@
         <div class="form-group no-padd col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <!-- date ini -->
             <label for="date_ini">Fecha de inicio</label>
-            <input name="date_ini" type="date" 
+            <input name="date_ini" type="date"
                 <?php if (isset($event)) {
                     $eventDateIni = new DateTime($event->date_ini);
                     $eventDateEnd = new DateTime($event->date_end);
@@ -42,11 +42,11 @@
         <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
             <!-- time ini -->
             <label for="time_ini">Hora de inicio</label>
-            <input name="time_ini" type="time" 
+            <input name="time_ini" type="time"
                 <?php if (isset($event)): ?>
                     value="<?php echo $eventDateIni->format('H:i'); ?>"
                 <?php else: ?>
-                    value="<?php echo $now->format('H:i'); ?>"                    
+                    value="<?php echo $now->format('H:i'); ?>"
                 <?php endif ?>
                 class="form-control">
         </div>
@@ -54,10 +54,10 @@
             <!-- date end -->
             <div id="date-end">
                 <label for="date_end">Fecha de finalización</label>
-                <input name="date_end" type="date" 
+                <input name="date_end" type="date"
                 <?php if (isset($event)): ?>
                     value="<?php echo $eventDateEnd->format('Y-m-d'); ?>"
-                <?php else: ?>                  
+                <?php else: ?>
                     value="<?php echo $now->format('Y-m-d'); ?>"
                 <?php endif ?>
                     class="form-control">
@@ -66,11 +66,11 @@
         <div class="form-group col-lg-2 col-md-2 col-sm-2 col-xs-12">
             <!-- time end -->
             <label for="time_end">Hora de finalización</label>
-            <input name="time_end" type="time" 
+            <input name="time_end" type="time"
             <?php if (isset($event)): ?>
                 value="<?php echo $eventDateEnd->format('H:i'); ?>"
             <?php else: ?>
-                value="<?php echo $now->format('H:i'); ?>"                
+                value="<?php echo $now->format('H:i'); ?>"
             <?php endif ?>
                 class="form-control">
         </div>

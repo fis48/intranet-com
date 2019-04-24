@@ -6,9 +6,9 @@
     <h3>
     </h3>
     <?php if (!isset($word)): ?>
-        <?php echo form_open('/admin/addword') ?>
+        <?php echo form_open('/index.php/admin/addword') ?>
     <?php else: ?>
-        <?php echo form_open('/admin/glossaryedit/'.$word->id) ?>
+        <?php echo form_open('/index.php/admin/glossaryedit/'.$word->id) ?>
             <input type="hidden" name="word-id" value="<?php echo $word->id ?>">
     <?php endif ?>
         <!-- word -->

@@ -3,7 +3,7 @@
         <i class="fa fa-book fa-sm"></i>
         ¿Quién es Quién?
     </h1>
-    <a href="<?php echo '/admin/addteam' ?>" class="btn-sm btn btn-danger">
+    <a href="<?php echo '/index.php/admin/addteam' ?>" class="btn-sm btn btn-danger">
         <i class="fa fa-user-plus"></i>
         Agregar persona
     </a>
@@ -13,14 +13,14 @@
         <?php foreach ($team as $teamItem): ?>
         <div class="container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12 float-left">
             <div class="no-border col-lg-2 col-md-2 col-sm-2 col-xs-12 float-left">
-                <img src="<?php echo "/team/".$teamItem->image ?>" class="img-fluid" alt="Cmc Analytics">
+                <img src="<?php echo "/index.php/team/".$teamItem->image ?>" class="img-fluid" alt="Cmc Analytics">
             </div>
             <dt><?php echo $teamItem->name.' '.$teamItem->last_name ?></dt>
             <dd><?php echo $teamItem->description ?></dd>
-            <a href="<?php echo '/admin/updateteam/'.$teamItem->id ?>" class="btn-sm btn btn-primary">
+            <a href="<?php echo '/index.php/admin/updateteam/'.$teamItem->id ?>" class="btn-sm btn btn-primary">
                 Editar
             </a>
-            <a href="<?php echo '/admin/teamdelete/'.$teamItem->id ?>" class="btn-sm btn btn-danger">
+            <a href="<?php echo '/index.php/admin/teamdelete/'.$teamItem->id ?>" class="btn-sm btn btn-danger">
                 Eliminar
             </a>
         </div>

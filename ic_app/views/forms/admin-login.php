@@ -1,7 +1,7 @@
 <div class="admin-login col-lg-4 col-md-4 col-sm-4 col-xs-12">
     <h1>CMC Analytics</h1>
     <h2>Intranet communications</h2>
-    <?php echo form_open('/admin/login') ?>
+    <?php echo form_open('/index.php/admin/login') ?>
         <!-- email -->
         <div class="form-group">
             <label for="email">Email</label>
@@ -13,3 +13,6 @@
         </div>
     <?php echo form_close(); ?>
 </div>
+
+
+<form></form>

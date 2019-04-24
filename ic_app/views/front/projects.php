@@ -45,7 +45,7 @@ Entérate en qué consisten nuestros proyectos que hacen parte del gran programa
             <p class=" float-left">
                 <?php echo substr($project->description, 0, 220).'...' ?>
             </p>
-            <a href="<?php echo '/proyecto/'.$project->id ?>" class="more-btn btn btn-sm">
+            <a href="<?php echo '/index.php/proyecto/'.$project->id ?>" class="more-btn btn btn-sm">
                 Ver más
             </a>
         </div>

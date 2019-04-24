@@ -6,7 +6,7 @@
     <?php foreach ($news as $new): ?>
         <div class="cont-new container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h2><?php echo $new->title ?></h2>
-            <a href="<?php echo '/admin/updatenews/'.$new->id ?>" class="resp-btn btn btn-default btn-sm">
+            <a href="<?php echo '/index.php/admin/updatenews/'.$new->id ?>" class="resp-btn btn btn-default btn-sm">
                 <i class="fa fa-marker"> </i>
                 Actualizar
             </a>

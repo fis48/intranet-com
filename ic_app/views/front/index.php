@@ -32,7 +32,7 @@
     <h2 class="section-title">Programa de transformación</h2>
     <!-- projects -->
     <div class="icon-card col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <a href="/proyectos">
+        <a href="/index.php/proyectos">
             <img class="img-fluid" src="/assets/projects-icon.png" />
             <h3>Los proyectos</h3>
             <p>
@@ -42,7 +42,7 @@
     </div>
     <!-- who -->
     <div class="icon-card col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <a href="/quien-es-quien">
+        <a href="/index.php/quien-es-quien">
             <img class="img-fluid" src="/assets/who-icon.png" />
             <h3>Quién es quién</h3>
             <p>
@@ -52,7 +52,7 @@
     </div>
     <!-- glossary -->
     <div class="icon-card col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <a href="/glosario">
+        <a href="/index.php/glosario">
             <img class="img-fluid" src="/assets/glossary-icon.png" />
             <h3>Glosario</h3>
             <p>
@@ -67,7 +67,7 @@
     <h2 class="section-title">Interactuemos</h2>
     <!-- questions -->
     <div class="icon-card col-lg-3 col-md-3 col-sm-12 col-xs-12">
-        <a href="/preguntas">
+        <a href="/index.php/preguntas">
             <img class="img-fluid" src="/assets/questions-icon.png" />
             <h3>Preguntas</h3>
             <p>
@@ -77,7 +77,7 @@
     </div>
     <!-- worry -->
     <div class="icon-card col-lg-3 col-md-3 col-sm-12 col-xs-12">
-        <a href="/me-preocupa">
+        <a href="/index.php/me-preocupa">
             <img class="img-fluid" src="/assets/worry-icon.png" />
             <h3>Me preocupa que</h3>
             <p>
@@ -87,7 +87,7 @@
     </div>
     <!-- like -->
     <div class="icon-card col-lg-3 col-md-3 col-sm-12 col-xs-12">
-        <a href="/me-gusta">
+        <a href="/index.php/me-gusta">
             <img class="img-fluid" src="/assets/like-icon.png" />
             <h3>Me gusta que</h3>
             <p>
@@ -97,7 +97,7 @@
     </div>
     <!-- occur -->
     <div class="icon-card col-lg-3 col-md-3 col-sm-12 col-xs-12">
-        <a href="/se-me-ocurre">
+        <a href="/index.php/se-me-ocurre">
             <img class="img-fluid" src="/assets/idea-icon.png" />
             <h3>Se me ocurre que</h3>
             <p>
@@ -111,7 +111,7 @@
 <section id="news" class="gray-back">
     <h2 class="section-title">Últimas noticias</h2>
     <div class="icon-card col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <a href="/noticias">
+        <a href="/index.php/noticias">
             <img class="img-fluid" src="/assets/bulletin-icon.png" />
             <h3>Boletines</h3>
             <p>
@@ -120,7 +120,7 @@
         </a>
     </div>
     <div class="icon-card col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <a href="/eventos">
+        <a href="/index.php/eventos">
             <img class="img-fluid" src="/assets/calendar-icon.png" />
             <h3>Eventos</h3>
             <p>

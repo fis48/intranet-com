@@ -4,7 +4,7 @@
         <?php echo $formTitle ?>
     </h1>
     <?php if (isset($slide)): ?>
-		<?php echo form_open_multipart('/admin/updateslide/'.$slide->id) ?>
+		<?php echo form_open_multipart('/index.php/admin/updateslide/'.$slide->id) ?>
             <input type="hidden" name="id" value="<?php echo $slide->id ?>">
 	<?php else: ?>
 		<?php echo form_open_multipart('/admin/addslide') ?>
@@ -62,7 +62,7 @@
         <!-- title -->
         <div class="form-group no-padd col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <label for="title">Título</label>
-            <input name="title" type="text" class="form-control" 
+            <input name="title" type="text" class="form-control"
             <?php if (isset($slide)): ?>
             	value="<?php echo $slide->title ?>"
             <?php endif ?>
@@ -80,12 +80,12 @@
         		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padd">
         			<p>Imagen actual</p>
     	    		<img src="<?php echo '/home_slide/'.$slide->image ?>" class="img-fluid img-thumbnail">
-	        	</div>        		
+	        	</div>
         	<?php endif ?>
         	<div class="clear-1"></div>
             <label for="image">Imagen</label>
             <div class="clear-1"></div>
-            <input name="image" type="file" 
+            <input name="image" type="file"
             <?php if (!isset($slide)): ?>
             	required
             <?php endif ?>>

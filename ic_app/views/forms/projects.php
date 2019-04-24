@@ -9,9 +9,9 @@
         <?php endif ?>
     </h1>
     <?php if (isset($project)): ?>
-        <?php echo form_open_multipart('/admin/updateproject/'.$project->id) ?>
+        <?php echo form_open_multipart('/index.php/admin/updateproject/'.$project->id) ?>
     <?php else: ?>
-        <?php echo form_open_multipart('/admin/addproject') ?>
+        <?php echo form_open_multipart('/index.php/admin/addproject') ?>
     <?php endif ?>
         <!-- title -->
         <div class="form-group no-padd col-lg-8 col-md-12 col-sm-12 col-xs-12">

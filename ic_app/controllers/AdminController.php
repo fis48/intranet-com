@@ -18,7 +18,7 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         $data['logged'] = $logged;
         $data['glossary']   = $this->GeneralModel->getSimpleItems('glossary');
@@ -48,18 +48,18 @@ class AdminController extends CI_Controller {
     public function login()
     {
         if ($this->session->userdata('admin') !== NULL) {
-            redirect('/admin/dashboard', 'refresh');
+            redirect('/index.php/admin/dashboard', 'refresh');
         }
         // post
         if ($this->input->post()) {
             $logged = $this->GeneralModel->login($this->input->post());
             if (!$logged) {
                 $this->session->set_flashdata('msg', 'Ingreso no permitido.');
-                redirect('/admin', 'refresh');
+                redirect('/index.php/admin', 'refresh');
             }
             else
             {
-                redirect('/admin/dashboard', 'refresh');
+                redirect('/index.php/admin/dashboard', 'refresh');
             }
         }
         // default
@@ -72,7 +72,7 @@ class AdminController extends CI_Controller {
     {
         $this->session->sess_destroy();
         $this->session->set_flashdata('msg', 'Sesión cerrarda.');
-        redirect('/admin', 'refresh');
+        redirect('/index.php/admin', 'refresh');
     }
     // add word to glossary
     public function addWord()
@@ -80,13 +80,13 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // post
         if ($this->input->post()) {
             $added = $this->GeneralModel->addWord($this->input->post());
             $this->session->set_flashdata('msg', 'Palabra guardada.');
-            redirect('/admin/glossary', 'refresh');
+            redirect('/index.php/admin/glossary', 'refresh');
         }
         // default form
         $data['logged'] = $this->session->userdata('admin');
@@ -100,7 +100,7 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         $data['logged'] = $this->session->userdata('admin');
         $data['glossary']   = $this->GeneralModel->getSimpleItems('glossary');
@@ -113,13 +113,13 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // post
         if ($this->input->post()) {
             $this->GeneralModel->updateWord($this->input->post());
             $this->session->set_flashdata('msg', 'Glosario actualizado.');
-            redirect('/admin/glossary', 'refresh');
+            redirect('/index.php/admin/glossary', 'refresh');
         }
         // default
         $data['logged'] = $this->session->userdata('admin');
@@ -134,7 +134,7 @@ class AdminController extends CI_Controller {
     {
         $this->GeneralModel->itemDelete('glossary', $this->uri->segment(3));
         $this->session->set_flashdata('msg', 'Registro eliminado.');
-        redirect('/admin/glossary', 'refresh');
+        redirect('/index.php/admin/glossary', 'refresh');
     }
     // unresolved questions
     public function questions()
@@ -143,7 +143,7 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         $data['logged'] = $this->session->userdata('admin');
         $data['mainContent']    = 'back/questions';
@@ -169,7 +169,7 @@ class AdminController extends CI_Controller {
         $now = new Datetime();
         $filename = $this->GeneralModel->getQuestionsCsv($now);
         $this->session->set_flashdata('Se ha generado un nuevo reporte de preguntas.');
-        redirect('/admin/questionsreports', 'refresh');
+        redirect('/index.php/admin/questionsreports', 'refresh');
     }
     // questions reports
     public function questionsReports()
@@ -190,7 +190,7 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         setlocale(LC_ALL, 'es_ES');
         $question = $this->GeneralModel->getSimpleItem('questions', $this->uri->segment(3));
@@ -198,7 +198,7 @@ class AdminController extends CI_Controller {
         if ($this->input->post()) {
             $this->GeneralModel->questionResponse($question, $this->input->post());
             $this->session->set_flashdata('msg', 'Pregunta resuelta.');
-            redirect('/admin/questions');
+            redirect('/index.php/admin/questions');
         }
         // default
         $data['logged'] = $this->session->userdata('admin');
@@ -213,18 +213,18 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // post
         if ($this->input->post()) {
             $updated = $this->GeneralModel->responseUpdate($this->input->post());
             $this->session->set_flashdata('msg', 'Respuesta actualizada.');
             if ($updated->is_comment == 1) {
-                redirect('/admin/comments', 'refresh');
+                redirect('/index.php/admin/comments', 'refresh');
             }
             else
             {
-                redirect('/admin/questions', 'refresh');
+                redirect('/index.php/admin/questions', 'refresh');
             }
         }
         // default
@@ -241,13 +241,13 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // post
         if ($this->input->post()) {
             $updated = $this->GeneralModel->questionUpdate($this->input->post());
             $this->session->set_flashdata('msg', 'Respuesta actualizada.');
-            redirect('/admin/questions', 'refresh');
+            redirect('/index.php/admin/questions', 'refresh');
         }
         // default
         $data['logged'] = $this->session->userdata('admin');
@@ -264,7 +264,7 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         $data['logged'] = $this->session->userdata('admin');
         $data['comments']   = $this->GeneralModel->getComments();
@@ -278,7 +278,7 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // default
         $data['logged'] = $this->session->userdata('admin');
@@ -292,7 +292,7 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // ajax images form bulletin creation
         if ( $this->input->is_ajax_request() ) {
@@ -308,7 +308,7 @@ class AdminController extends CI_Controller {
         if ($this->input->post()) {
             $this->GeneralModel->addNews($this->input->post(), $_FILES);
             $this->session->set_flashdata('msg', 'Noticia guardada.');
-            redirect('/admin/news', 'refresh');
+            redirect('/index.php/admin/news', 'refresh');
         }
         // default
         $data['logged'] = $this->session->userdata('admin');
@@ -322,13 +322,13 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // post
         if ($this->input->post()) {
             $this->GeneralModel->updateNews($this->input->post(), $_FILES);
             $this->session->set_flashdata('msg', 'Boletín guardado.');
-            redirect('/admin/news', 'refresh');
+            redirect('/index.php/admin/news', 'refresh');
         }
         // default
         $data['logged']     = $this->session->userdata('admin');
@@ -353,13 +353,13 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // post
         if ($this->input->post()) {
             $this->GeneralModel->addEvent($this->input->post(), $_FILES);
             $this->session->set_flashdata('msg', 'Evento guardado.');
-            redirect('/admin/events', 'refresh');
+            redirect('/index.php/admin/events', 'refresh');
         }
         // default
         $data['logged'] = $this->session->userdata('admin');
@@ -373,13 +373,13 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // post
         if ($this->input->post()) {
             $this->GeneralModel->updateEvent($this->input->post(), $_FILES);
             $this->session->set_flashdata('msg', 'Evento guardado.');
-            redirect('/admin/events', 'refresh');
+            redirect('/index.php/admin/events', 'refresh');
         }
         // default
         $data['logged']     = $this->session->userdata('admin');
@@ -394,7 +394,7 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         $data['logged'] = $this->session->userdata('admin');
         $data['now']    = new Datetime();
@@ -408,13 +408,13 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // post
         if ($this->input->post()) {
             $this->GeneralModel->addProject($this->input->post(), $_FILES);
             $this->session->set_flashdata('msg', 'Proyecto guardado.');
-            redirect('/admin/projects', 'refresh');
+            redirect('/index.php/admin/projects', 'refresh');
         }
         // default
         $data['logged'] = $this->session->userdata('admin');
@@ -428,13 +428,13 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // post
         if ($this->input->post()) {
             $this->GeneralModel->updateProject($this->input->post(), $_FILES);
             $this->session->set_flashdata('msg', 'Proyecto guardado.');
-            redirect('/admin/projects', 'refresh');
+            redirect('/index.php/admin/projects', 'refresh');
         }
         // default
         $data['logged']     = $this->session->userdata('admin');
@@ -449,7 +449,7 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         $data['logged'] = $this->session->userdata('admin');
         $data['now']    = new Datetime();
@@ -463,13 +463,13 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // post
         if ($this->input->post()) {
             $added = $this->GeneralModel->addTeam($this->input->post(), $_FILES);
             $this->session->set_flashdata('msg', 'Persona guardada.');
-            redirect('/admin/team', 'refresh');
+            redirect('/index.php/admin/team', 'refresh');
         }
         // default form
         $data['logged'] = $this->session->userdata('admin');
@@ -483,13 +483,13 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // post
         if ($this->input->post()) {
             $this->GeneralModel->updateTeam($this->input->post(), $_FILES);
             $this->session->set_flashdata('msg', 'Registro actualizado.');
-            redirect('/admin/team', 'refresh');
+            redirect('/index.php/admin/team', 'refresh');
         }
         // default
         $data['logged']     = $this->session->userdata('admin');
@@ -504,7 +504,7 @@ class AdminController extends CI_Controller {
     {
         $this->GeneralModel->itemDelete('team', $this->uri->segment(3));
         $this->session->set_flashdata('msg', 'Registro eliminado.');
-        redirect('/admin/team', 'refresh');
+        redirect('/index.php/admin/team', 'refresh');
     }
     // slide
     public function slide()
@@ -512,7 +512,7 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         $data['logged'] = $this->session->userdata('admin');
         $data['now']    = new Datetime();
@@ -526,13 +526,13 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // post
         if ($this->input->post()) {
             $added = $this->GeneralModel->addSlide($this->input->post(), $_FILES);
             $this->session->set_flashdata('msg', 'Imagen guardada.');
-            redirect('/admin/slide', 'refresh');
+            redirect('/index.php/admin/slide', 'refresh');
         }
         // default form
         $data['logged'] = $this->session->userdata('admin');
@@ -546,13 +546,13 @@ class AdminController extends CI_Controller {
         $logged = $this->session->userdata('admin');
         if (!$logged) {
             $this->session->set_flashdata('msg', 'No existe un usuario registrado.');
-            redirect('/admin/', 'refresh');
+            redirect('/index.php/admin/', 'refresh');
         }
         // post
         if ($this->input->post()) {
             $this->GeneralModel->updateSlide($this->input->post(), $_FILES);
             $this->session->set_flashdata('msg', 'Registro actualizado.');
-            redirect('/admin/slide', 'refresh');
+            redirect('/index.php/admin/slide', 'refresh');
         }
         // default
         $data['logged']     = $this->session->userdata('admin');
@@ -567,7 +567,7 @@ class AdminController extends CI_Controller {
     {
         $this->GeneralModel->itemDelete('slide', $this->uri->segment(3));
         $this->session->set_flashdata('msg', 'Registro eliminado.');
-        redirect('/admin/slide', 'refresh');
+        redirect('/index.php/admin/slide', 'refresh');
     }
 
 }

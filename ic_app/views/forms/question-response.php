@@ -19,9 +19,9 @@
     </p>
     <!-- form -->
     <?php if ($this->uri->segment(2) == 'responseupdate'): ?>
-        <?php echo form_open('/admin/responseupdate/'.$question->id) ?>
+        <?php echo form_open('/index.php/admin/responseupdate/'.$question->id) ?>
     <?php else: ?>
-        <?php echo form_open('/admin/questionresponse/'.$question->id) ?>
+        <?php echo form_open('/index.php/admin/questionresponse/'.$question->id) ?>
     <?php endif ?>
         <div class="form-group">
             <!-- response -->

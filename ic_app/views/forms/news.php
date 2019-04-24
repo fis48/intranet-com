@@ -3,14 +3,14 @@
         <i class="fa fa-newspaper"></i>
         <?php if (isset($new)): ?>
             Actualizar boletín
-        <?php else: ?>            
+        <?php else: ?>
             Agregar boletín
         <?php endif ?>
     </h1>
     <?php if (isset($new)): ?>
-        <?php echo form_open_multipart('/admin/updatenews/'.$new->id) ?>
+        <?php echo form_open_multipart('/index.php/admin/updatenews/'.$new->id) ?>
     <?php else: ?>
-        <?php echo form_open_multipart('/admin/addnews') ?>        
+        <?php echo form_open_multipart('/index.php/admin/addnews') ?>
     <?php endif ?>
         <div class="form-group col-lg-8 col-md-8 col-sm-8 col-xs-8">
             <!-- title -->

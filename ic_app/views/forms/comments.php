@@ -2,7 +2,7 @@
     <h1>Escríbanos sus comentarios</h1>
     <div class="clear-25"></div>
 
-    <?php echo form_open('/front/askquestion') ?>
+    <?php echo form_open('/index.php/front/askquestion') ?>
         <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <!-- full name -->
             <label for="full_name">Nombres y Apellidos</label>

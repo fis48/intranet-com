@@ -1,7 +1,7 @@
 <!-- banner -->
 <section id="main-banner" class="container-fuid news">
     <?php if (isset($mainImg)): ?>
-        <img class="img-fluid" src="<?php echo '/home_slide/'.$mainImg ?>">        
+        <img class="img-fluid" src="<?php echo '/home_slide/'.$mainImg ?>">
     <?php endif ?>
     <!-- text -->
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 float-left">
@@ -45,7 +45,7 @@
             <p class=" float-left">
                 <?php echo substr($event->description, 0, 220).'...' ?>
             </p>
-            <a href="<?php echo '/evento/'.$event->id ?>" class="more-btn btn btn-sm">
+            <a href="<?php echo '/index.php/evento/'.$event->id ?>" class="more-btn btn btn-sm">
                 Ver más
             </a>
         </div>

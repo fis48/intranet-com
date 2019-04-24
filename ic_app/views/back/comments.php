@@ -65,7 +65,7 @@
                     <?php echo strftime('%d %b', $updDate->getTimestamp()); ?>
                 </td>
                 <td>
-                    <a href="<?php echo '/admin/responseupdate/'.$cLike->id; ?>"
+                    <a href="<?php echo '/index.php/admin/responseupdate/'.$cLike->id; ?>"
                         class="btn btn-primary resp-btn btn-sm">
                         <i class="fa fa-marker"></i>
                         Actualizar respuesta
@@ -73,7 +73,7 @@
                 </td>
             <?php else: ?>
                 <td>
-                    <a href="<?php echo '/admin/questionresponse/'.$cLike->id; ?>"
+                    <a href="<?php echo '/index.php/admin/questionresponse/'.$cLike->id; ?>"
                         class="btn btn-primary resp-btn btn-sm">
                         <i class="fa fa-exchange-alt"></i>
                         Responder
@@ -115,7 +115,7 @@
                 </td>
             <?php else: ?>
                 <td>
-                    <a href="<?php echo '/admin/questionresponse/'.$wLike->id; ?>"
+                    <a href="<?php echo '/index.php/admin/questionresponse/'.$wLike->id; ?>"
                         class="btn btn-primary">
                         Responder
                     </a>
@@ -196,7 +196,7 @@
                                 <?php echo strftime('%d %b', $oeRespUpdDate->getTimestamp()); ?>
                             </td>
                             <td>
-                                <a href="<?php echo '/admin/responseupdate/'.$oeComment->id; ?>"
+                                <a href="<?php echo '/index.php/admin/responseupdate/'.$oeComment->id; ?>"
                                     class="btn btn-primary resp-btn btn-sm">
                                     <i class="fa fa-marker"></i>
                                     Actualizar respuesta
@@ -204,7 +204,7 @@
                             </td>
                         <?php else: ?>
                             <td>
-                                <a href="<?php echo '/admin/questionresponse/'.$oeComment->id; ?>"
+                                <a href="<?php echo '/index.php/admin/questionresponse/'.$oeComment->id; ?>"
                                     class="btn btn-primary resp-btn btn-sm">
                                     <i class="fa fa-exchange-alt"></i>
                                     Responder
@@ -244,7 +244,7 @@
                             </td>
                         <?php else: ?>
                             <td>
-                                <a href="<?php echo '/admin/questionresponse/'.$ocComment->id; ?>"
+                                <a href="<?php echo '/index.php/admin/questionresponse/'.$ocComment->id; ?>"
                                     class="btn btn-primary">
                                     Responder
                                 </a>
@@ -284,7 +284,7 @@
                             </td>
                         <?php else: ?>
                             <td>
-                                <a href="<?php echo '/admin/questionresponse/'.$opComment->id; ?>"
+                                <a href="<?php echo '/index.php/admin/questionresponse/'.$opComment->id; ?>"
                                     class="btn btn-primary">
                                     Responder
                                 </a>

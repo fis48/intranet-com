@@ -73,16 +73,16 @@ class FrontController extends CI_Controller {
         // redirect
         if ($is_comment) {
             $this->session->set_flashdata('msg', 'Gracias por enviarnos tus inquietudes. En los próximos días recibirás respuesta del equipo de transformación.');
-            redirect('/front/comments', 'refresh');
+            redirect('/index.php/front/comments', 'refresh');
         }
         elseif ($is_admin) {
             $this->session->set_flashdata('msg', 'Gracias por enviarnos tus inquietudes. En los próximos días recibirás respuesta del equipo de transformación.');
-            redirect('/admin/questions', 'refresh');
+            redirect('/index.php/admin/questions', 'refresh');
         }
         else
         {
             $this->session->set_flashdata('msg', 'Gracias por enviarnos tus inquietudes. En los próximos días recibirás respuesta del equipo de transformación.');
-            redirect('/front/questions', 'refresh');
+            redirect('/index.php/front/questions', 'refresh');
         }
     }
     // comments
@@ -124,7 +124,7 @@ class FrontController extends CI_Controller {
     {
         $comment = $this->GeneralModel->addComment($this->input->post());
         $this->session->set_flashdata('msg', 'Comentario guardado.');
-        redirect('/front/comments', 'refresh');
+        redirect('/index.php/front/comments', 'refresh');
     }
     // interact
     public function interact()
