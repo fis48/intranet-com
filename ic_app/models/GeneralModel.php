@@ -98,39 +98,42 @@ class GeneralModel extends CI_Model {
                 if (isset($mailData['is_comment'])) {
                     $subject = 'Nuevo comentario guardado';
                     $tipo = 'Comentario';
-                    $message = 'Su comentario ha sido guardado';
+                    $message = 'Su comentario ha sido guardado: '.$mailData['question'];
                 }
                 else {
                     $subject = 'Nueva pregunta guardada.';
                     $tipo = 'Pregunta';
-                    $message = 'Su pregunta ha sido guardada';
+                    $message = 'Su pregunta ha sido guardada: '.$mailData['question'];
                 }
             break;
             case 'q-ask-responsable':
                 if (isset($mailData['is_comment'])) {
                     $subject = 'Nuevo comentario';
                     $tipo = 'Comentario';
-                    $message = 'Ha recibido un nuevo comentario';
+                    $message = 'Ha recibido un nuevo comentario: '.$mailData['question'];
                 }
                 else {
                     $subject = 'Nueva pregunta';
                     $tipo = 'Pregunta';
-                    $message = 'Ha recibido una nueva pregunta';
+                    $message = 'Ha recibido una nueva pregunta: '.$mailData['question'];
                 }
             break;
             case 'q-response':
                 if (isset($mailData['is_comment'])) {
                     $subject = 'Respuesta a su comentario';
                     $tipo = 'Comentario';
-                    $message = 'Ha recibido respuesta a su comentario.';
+                    $message = 'Ha recibido respuesta: '.$mailData['response'];
                 }
                 else {
                     $subject = 'Respuesta a su pregunta';
                     $tipo = 'Pregunta';
-                    $message = 'Ha recibido respuesta a su pregunta.';
+                    $message = 'Ha recibido respuesta: '.$mailData['response'];
                 }
             break;
             case 'q-response-update':
+
+                print_r($mailData);
+
                 if ($mailData['is_comment'] == 1) {
                     $subject = 'Actualización a un comentario.';
                     $tipo = 'Comentario';
@@ -146,9 +149,15 @@ class GeneralModel extends CI_Model {
         // send email
         $this->load->library('email');
         $this->email->from('info@fidelsilva.com', 'Fidel Silva');
-        $this->email->to('diego@cmcanalytics.co');
+        if ($type == 'q-response') {
+            $this->email->to($mailData['q_email']);
+        }
+        else
+        {
+            $this->email->to('info@fidelsilva.com');
+        }
         $this->email->subject($subject);
-        $this->email->message('Correo de notificación: '.$tipo.' ** '.$message);
+        $this->email->message('Correo de notificación: '.$tipo.' | '.$message);
         if (!$this->email->send()) {
             print_r( $this->email->print_debugger() );
         }

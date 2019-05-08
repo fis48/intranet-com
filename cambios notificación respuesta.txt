@@ -1,0 +1,2 @@
+1. En GeneralModel líneas 149 a 155 se condiciona el correo destino
+2. En views/forms/question-response linea 38 se agrega input q_email

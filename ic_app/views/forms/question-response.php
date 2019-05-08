@@ -35,6 +35,8 @@
         </div>
         <!-- question id -->
         <input name="q_id" value="<?php echo $question->id ?>" type="hidden">
+        <!-- question email -->
+        <input name="q_email" type="hidden" value="<?php echo $question->email ?>">
         <!-- is comment -->
         <input name="is_comment" value="<?php echo $question->is_comment ?>" type="hidden">
         <!-- question date -->
